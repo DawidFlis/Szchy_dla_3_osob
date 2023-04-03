@@ -1,0 +1,151 @@
+﻿  3_Chess.cpp
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(47,61): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(47,40): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(48,31): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(53,25): warning C4244: '=': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(54,25): warning C4244: '=': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(56,71): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(56,53): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(57,114): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(57,65): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(58,69): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(58,49): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(59,113): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(59,63): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(60,70): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(60,50): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(61,114): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(61,64): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(65,65): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(65,43): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(66,71): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(66,47): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(67,66): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(67,42): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(69,69): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(69,43): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(71,73): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(71,23): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(94,135): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(94,84): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(102,134): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(102,84): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(106,130): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(106,79): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(114,129): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(114,79): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(120,131): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(120,80): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(128,130): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(128,80): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(135,80): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(135,51): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(159,92): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(159,61): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(161,77): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(161,51): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(169,80): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\3_Chess.cpp(169,51): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Pole.cpp
+D:\dawid\CPP\3_Chess\3_Chess\Pole.cpp(19,91): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\Pole.cpp(20,88): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\Pole.cpp(25,99): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\Pole.cpp(26,97): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\Pole.cpp(31,126): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\Pole.cpp(32,132): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\Pole.cpp(37,136): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\dawid\CPP\3_Chess\3_Chess\Pole.cpp(38,137): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Generating code
+  0 of 124 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  3_Chess.vcxproj -> D:\dawid\CPP\3_Chess\x64\Release\3_Chess.exe
