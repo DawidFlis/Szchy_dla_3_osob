@@ -211,7 +211,7 @@ int main()
         if (cala_plansza)
         {
             window.draw(powrot);
-            for(int k=0;k<48;k++)
+            for(int k=0;k<32;k++)
                 window.draw(fig[k]);
         }
        // window.draw(pion);
