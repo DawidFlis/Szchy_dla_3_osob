@@ -16,7 +16,7 @@ Pole::Pole(int _x, int _y, int _czesc_planszy, int _srodek_szachownicy_x, int _s
 {
 		if (x>3)
 		{
-			wy = srodek_szachownicy_y-0.105*rozmiar_szachownicy*(y+1) + 0.47 * rozmiar_szachownicy + 0.013 * (x-3.5 ) * (y +0.5) * rozmiar_szachownicy;
+			wy = srodek_szachownicy_y-0.105*rozmiar_szachownicy*(y+1) + 0.47 * rozmiar_szachownicy + 0.013 * (x-3.5 ) * (y +0.5) * rozmiar_szachownicy;  //NIE RUSZAC
 			wx = srodek_szachownicy_x +(x-3)*rozmiar_szachownicy*0.06-0.03 * rozmiar_szachownicy+ 0.0075 * (x - 3.5) * (y + 0.5) * rozmiar_szachownicy;
 
 		}

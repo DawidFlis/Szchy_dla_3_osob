@@ -40,7 +40,7 @@ int main()
     pio.loadFromFile("images/pion_r.png");
     for(int k=0;k<3;k++)
     for (int i = 0; i < 8; i++)
-        for(int j=0;j<2;j++)
+        for(int j=0;j<4;j++)
     {
         sf::Sprite pion(pio);
         Pole pol(i, j, k, window.getSize().x / 2, window.getSize().y / 2, (float)(window.getSize().y));
@@ -211,8 +211,9 @@ int main()
         if (cala_plansza)
         {
             window.draw(powrot);
-            for(int k=0;k<32;k++)
-                window.draw(fig[k]);
+            /*for(int k=0;k<96;k++)*/
+            for(auto i : fig)
+                window.draw(i);
         }
        // window.draw(pion);
         window.display();
