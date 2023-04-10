@@ -11,10 +11,13 @@ class Pole
 	float rozmiar_szachownicy;
 public:
 	Pole(int _x,int _y, int _czesc_planszy, int _srodek_szachownicy_x,int srodek_szachownicy_y, float _rozmiar_szachownicy);
+	Pole(){};
 	int get_x();
 	int get_y();
 	float get_wx();
 	float get_wy();
+	int get_czesc_planszy();
+	void set_position(float , float);
 
 };
 

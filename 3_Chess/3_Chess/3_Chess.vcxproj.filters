@@ -21,9 +21,51 @@
     <ClCompile Include="Pole.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Figura.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pionek.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Wieza.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Goniec.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Skoczek.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Krol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Hetman.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Pole.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Figura.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Pionek.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Wieza.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Goniec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Skoczek.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Krol.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Hetman.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

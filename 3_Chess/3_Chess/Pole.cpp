@@ -22,8 +22,8 @@ Pole::Pole(int _x, int _y, int _czesc_planszy, int _srodek_szachownicy_x, int _s
 		}
 		else
 		{
-			wy = srodek_szachownicy_y - 0.105 * rozmiar_szachownicy * (y + 1) + 0.47 * rozmiar_szachownicy + 0.013 * (x +0.5) * (y + 0.5) * rozmiar_szachownicy;
-			wx = srodek_szachownicy_x - (x +1) * rozmiar_szachownicy * 0.06 + 0.03 * rozmiar_szachownicy - 0.0075 * (x +0.5) * (y + 0.5) * rozmiar_szachownicy;
+			wy = srodek_szachownicy_y - 0.105 * rozmiar_szachownicy * (y + 1) + 0.47 * rozmiar_szachownicy + 0.013 * (3-x +0.5) * (y + 0.5) * rozmiar_szachownicy;
+			wx = srodek_szachownicy_x - (3-x +1) * rozmiar_szachownicy * 0.06 + 0.03 * rozmiar_szachownicy - 0.0075 * (3-x +0.5) * (y + 0.5) * rozmiar_szachownicy;
 		}
 		if (czesc_planszy == 1)
 		{
@@ -54,4 +54,15 @@ float Pole::get_wx()
 float Pole::get_wy()
 {
 	return wy;
+}
+
+int Pole::get_czesc_planszy()
+{
+	return czesc_planszy;
+}
+
+void Pole::set_position(float x, float y)
+{
+	wx = x;
+	wy = y;
 }
