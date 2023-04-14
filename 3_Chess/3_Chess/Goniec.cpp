@@ -1,7 +1,7 @@
 #include "Goniec.h"
 
 Goniec::Goniec(Pole p, int w)
-	:Figura(p, w),
+	:Figura(p, w, "Goniec"),
 	w_size(w)
 {
 	if (p.get_czesc_planszy() == 0)

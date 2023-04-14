@@ -2,7 +2,7 @@
 
 
 Krol::Krol(Pole p, int w)
-	:Figura(p, w),
+	:Figura(p, w, "Krol"),
 	w_size(w)
 {
 	if (p.get_czesc_planszy() == 0)

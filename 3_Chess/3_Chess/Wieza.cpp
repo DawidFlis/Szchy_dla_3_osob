@@ -1,7 +1,7 @@
 #include "Wieza.h"
 
 Wieza::Wieza(Pole p, int w)
-	:Figura(p, w),
+	:Figura(p, w, "Wieza"),
 	w_size(w)
 {
 	if (p.get_czesc_planszy() == 0)

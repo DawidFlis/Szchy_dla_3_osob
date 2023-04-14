@@ -2,9 +2,10 @@
 #include <iostream>
 
 
-Figura::Figura(Pole p, int w)
+Figura::Figura(Pole p, int w, std::string st)
 	:pol(p),
-	w_size(w)
+	w_size(w),
+	nazwa(st)
 {
 	kolor = pol.get_czesc_planszy();
 }
@@ -22,4 +23,9 @@ void Figura::set_pole(Pole p)
 int Figura::get_kolor()
 {
 	return kolor;
+}
+
+std::string Figura::get_nazwa()
+{
+	return nazwa;
 }

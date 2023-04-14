@@ -1,64 +1,158 @@
 ﻿  3_Chess.cpp
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\Pionek.h(5,24): warning C4584: „Pionek”: klasa bazowa „sf::Drawable” jest już klasą bazową „Figura”
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : zobacz deklarację „sf::Drawable”
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\Figura.h(5): message : zobacz deklarację „Figura”
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\Wieza.h(5,23): warning C4584: „Wieza”: klasa bazowa „sf::Drawable” jest już klasą bazową „Figura”
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : zobacz deklarację „sf::Drawable”
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\Figura.h(5): message : zobacz deklarację „Figura”
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\Goniec.h(5,24): warning C4584: „Goniec”: klasa bazowa „sf::Drawable” jest już klasą bazową „Figura”
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : zobacz deklarację „sf::Drawable”
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\Figura.h(5): message : zobacz deklarację „Figura”
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\Skoczek.h(5,25): warning C4584: „Skoczek”: klasa bazowa „sf::Drawable” jest już klasą bazową „Figura”
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : zobacz deklarację „sf::Drawable”
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\Figura.h(5): message : zobacz deklarację „Figura”
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\Krol.h(5,22): warning C4584: „Krol”: klasa bazowa „sf::Drawable” jest już klasą bazową „Figura”
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : zobacz deklarację „sf::Drawable”
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\Figura.h(5): message : zobacz deklarację „Figura”
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\Hetman.h(5,24): warning C4584: „Hetman”: klasa bazowa „sf::Drawable” jest już klasą bazową „Figura”
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : zobacz deklarację „sf::Drawable”
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\Figura.h(5): message : zobacz deklarację „Figura”
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(59,63): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(59,36): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(60,35): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Pionek.h(5,24): warning C4584: 'Pionek': base-class 'sf::Drawable' is already a base-class of 'Figura'
+D:\dawid\CPP\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : see declaration of 'sf::Drawable'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Figura.h(5): message : see declaration of 'Figura'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Wieza.h(5,23): warning C4584: 'Wieza': base-class 'sf::Drawable' is already a base-class of 'Figura'
+D:\dawid\CPP\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : see declaration of 'sf::Drawable'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Figura.h(5): message : see declaration of 'Figura'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Goniec.h(5,24): warning C4584: 'Goniec': base-class 'sf::Drawable' is already a base-class of 'Figura'
+D:\dawid\CPP\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : see declaration of 'sf::Drawable'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Figura.h(5): message : see declaration of 'Figura'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Skoczek.h(5,25): warning C4584: 'Skoczek': base-class 'sf::Drawable' is already a base-class of 'Figura'
+D:\dawid\CPP\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : see declaration of 'sf::Drawable'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Figura.h(5): message : see declaration of 'Figura'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Krol.h(5,22): warning C4584: 'Krol': base-class 'sf::Drawable' is already a base-class of 'Figura'
+D:\dawid\CPP\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : see declaration of 'sf::Drawable'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Figura.h(5): message : see declaration of 'Figura'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Hetman.h(5,24): warning C4584: 'Hetman': base-class 'sf::Drawable' is already a base-class of 'Figura'
+D:\dawid\CPP\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : see declaration of 'sf::Drawable'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Figura.h(5): message : see declaration of 'Figura'
+  Figura.cpp
+  Goniec.cpp
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Goniec.h(5,24): warning C4584: 'Goniec': base-class 'sf::Drawable' is already a base-class of 'Figura'
+D:\dawid\CPP\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : see declaration of 'sf::Drawable'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Figura.h(5): message : see declaration of 'Figura'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Goniec.cpp(14,37): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Goniec.cpp(14,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Goniec.cpp(15,49): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
           with
           [
               T=unsigned int
           ]
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(61,64): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(61,39): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(63,71): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(63,41): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(64,71): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(64,44): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(65,56): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(65,37): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(67,71): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(67,41): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(68,71): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(68,44): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(69,62): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(69,39): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(71,70): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(71,40): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(72,70): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(72,43): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(73,59): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(73,37): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(75,64): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Goniec.cpp(15,28): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Hetman.cpp
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Hetman.h(5,24): warning C4584: 'Hetman': base-class 'sf::Drawable' is already a base-class of 'Figura'
+D:\dawid\CPP\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : see declaration of 'sf::Drawable'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Figura.h(5): message : see declaration of 'Figura'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Hetman.cpp(15,37): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Hetman.cpp(15,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Hetman.cpp(16,49): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
           with
           [
               T=unsigned int
           ]
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(75,44): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Hetman.cpp(16,28): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Krol.cpp
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Krol.h(5,22): warning C4584: 'Krol': base-class 'sf::Drawable' is already a base-class of 'Figura'
+D:\dawid\CPP\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : see declaration of 'sf::Drawable'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Figura.h(5): message : see declaration of 'Figura'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Krol.cpp(15,37): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Krol.cpp(15,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Krol.cpp(16,49): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
           with
           [
               T=unsigned int
           ]
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(76,76): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(76,50): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(77,52): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(77,35): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(169,25): warning C4244: "=": konwersja z "T" do "T", możliwa utrata danych
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Krol.cpp(16,28): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Pionek.cpp
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Pionek.h(5,24): warning C4584: 'Pionek': base-class 'sf::Drawable' is already a base-class of 'Figura'
+D:\dawid\CPP\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : see declaration of 'sf::Drawable'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Figura.h(5): message : see declaration of 'Figura'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Pionek.cpp(14,38): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Pionek.cpp(14,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Pionek.cpp(15,48): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Pionek.cpp(15,28): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Plansza.cpp
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Pionek.h(5,24): warning C4584: 'Pionek': base-class 'sf::Drawable' is already a base-class of 'Figura'
+D:\dawid\CPP\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : see declaration of 'sf::Drawable'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Figura.h(5): message : see declaration of 'Figura'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Wieza.h(5,23): warning C4584: 'Wieza': base-class 'sf::Drawable' is already a base-class of 'Figura'
+D:\dawid\CPP\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : see declaration of 'sf::Drawable'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Figura.h(5): message : see declaration of 'Figura'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Goniec.h(5,24): warning C4584: 'Goniec': base-class 'sf::Drawable' is already a base-class of 'Figura'
+D:\dawid\CPP\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : see declaration of 'sf::Drawable'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Figura.h(5): message : see declaration of 'Figura'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Skoczek.h(5,25): warning C4584: 'Skoczek': base-class 'sf::Drawable' is already a base-class of 'Figura'
+D:\dawid\CPP\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : see declaration of 'sf::Drawable'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Figura.h(5): message : see declaration of 'Figura'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Krol.h(5,22): warning C4584: 'Krol': base-class 'sf::Drawable' is already a base-class of 'Figura'
+D:\dawid\CPP\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : see declaration of 'sf::Drawable'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Figura.h(5): message : see declaration of 'Figura'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Hetman.h(5,24): warning C4584: 'Hetman': base-class 'sf::Drawable' is already a base-class of 'Figura'
+D:\dawid\CPP\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : see declaration of 'sf::Drawable'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Figura.h(5): message : see declaration of 'Figura'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(161,66): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(161,37): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(162,35): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(163,67): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(163,40): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(165,71): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(165,41): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(166,71): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(166,44): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(167,60): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(167,38): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(169,71): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(169,41): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(170,71): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(170,44): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(171,62): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(171,39): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(173,70): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(173,40): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(174,70): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(174,43): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(175,59): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(175,37): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(177,64): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(177,44): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(178,76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(178,50): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(179,76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(179,47): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(184,43): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(184,26): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(185,69): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(185,41): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(190,62): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(190,40): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(191,61): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(191,41): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(192,118): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(192,68): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(193,69): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=unsigned int
@@ -67,7 +161,7 @@ C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(
           [
               T=float
           ]
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(170,25): warning C4244: "=": konwersja z "T" do "T", możliwa utrata danych
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(193,49): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=unsigned int
@@ -76,110 +170,97 @@ C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(
           [
               T=float
           ]
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(172,71): warning C4244: "argument": konwersja z "T" do "T", możliwa utrata danych
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(194,113): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(194,63): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(197,68): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
           with
           [
               T=unsigned int
           ]
-          and
-          [
-              T=float
-          ]
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(172,53): warning C4244: "argument": konwersja z "T" do "T", możliwa utrata danych
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(197,44): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
           with
           [
               T=unsigned int
           ]
-          and
-          [
-              T=float
-          ]
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(173,114): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(173,65): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(174,69): warning C4244: "argument": konwersja z "T" do "T", możliwa utrata danych
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(198,71): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(198,47): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
           with
           [
               T=unsigned int
           ]
-          and
-          [
-              T=float
-          ]
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(174,49): warning C4244: "argument": konwersja z "T" do "T", możliwa utrata danych
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(199,66): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(199,42): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
           with
           [
               T=unsigned int
           ]
-          and
-          [
-              T=float
-          ]
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(175,113): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(175,63): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(181,65): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(202,81): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(202,24): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(250,76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(250,47): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(271,88): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(271,57): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(273,73): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(273,47): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(284,76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(284,47): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(306,89): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(306,57): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(308,74): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(308,47): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(323,123): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(323,72): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(328,130): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(328,80): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(335,122): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(335,72): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(339,118): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(339,67): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(347,117): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(347,67): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(357,74): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(357,44): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(362,82): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(362,52): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(369,74): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(369,44): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(373,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(373,45): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(376,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(376,45): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(380,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(380,45): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(383,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(383,45): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(420,82): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(456,61): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Skoczek.cpp
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Skoczek.h(5,25): warning C4584: 'Skoczek': base-class 'sf::Drawable' is already a base-class of 'Figura'
+D:\dawid\CPP\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : see declaration of 'sf::Drawable'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Figura.h(5): message : see declaration of 'Figura'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Skoczek.cpp(14,38): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Skoczek.cpp(14,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Skoczek.cpp(15,49): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
           with
           [
               T=unsigned int
           ]
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(181,43): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Skoczek.cpp(15,28): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Wieza.cpp
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Wieza.h(5,23): warning C4584: 'Wieza': base-class 'sf::Drawable' is already a base-class of 'Figura'
+D:\dawid\CPP\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : see declaration of 'sf::Drawable'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Figura.h(5): message : see declaration of 'Figura'
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Wieza.cpp(14,37): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Wieza.cpp(14,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Wieza.cpp(15,49): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
           with
           [
               T=unsigned int
           ]
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(182,71): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(182,47): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-          with
-          [
-              T=unsigned int
-          ]
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(183,66): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(183,42): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-          with
-          [
-              T=unsigned int
-          ]
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(187,73): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(187,23): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(215,135): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(215,84): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(220,142): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(220,92): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(227,134): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(227,84): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(231,130): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(231,79): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(239,129): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(239,79): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(245,86): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(245,56): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(250,94): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(250,64): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(257,86): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(257,56): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(261,87): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(261,57): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(264,87): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(264,57): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(268,87): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(268,57): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(271,87): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(271,57): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(333,80): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(333,51): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(357,91): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(357,61): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(359,76): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(359,51): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(370,80): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(370,51): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(401,92): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(401,61): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(404,77): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(404,51): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\3_Chess.cpp(81,28): warning C4930: "std::list<std::string,std::allocator<std::string>> zagrania(void)": prototypowana funkcja nie została wywołana (czy definicja zmiennej była zamierzona?)
-  Trwa generowanie kodu
-  1 of 349 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Wieza.cpp(15,28): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Generating code
+  0 of 470 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
-  Zakończono generowanie kodu
-  3_Chess.vcxproj -> C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\x64\Release\3_Chess.exe
+  Finished generating code
+  3_Chess.vcxproj -> D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\x64\Release\3_Chess.exe

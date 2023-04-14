@@ -1,7 +1,7 @@
 #include "Pionek.h"
 
 Pionek::Pionek(Pole p, int w)
-	:Figura(p, w),
+	:Figura(p, w, "Pionek"),
 	w_size(w)
 {
 	if (p.get_czesc_planszy() == 0)

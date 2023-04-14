@@ -2,7 +2,7 @@
 
 
 Hetman::Hetman(Pole p, int w)
-	:Figura(p, w),
+	:Figura(p, w, "Hetman"),
 	w_size(w)
 {
 	if (p.get_czesc_planszy() == 0)

@@ -1,7 +1,7 @@
 #include "Skoczek.h"
 
 Skoczek::Skoczek(Pole p, int w)
-	:Figura(p, w),
+	:Figura(p, w, "Skoczek"),
 	w_size(w)
 {
 	if (p.get_czesc_planszy() == 0)
