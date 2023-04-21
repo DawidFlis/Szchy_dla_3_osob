@@ -33,6 +33,9 @@ class Plansza
 	sf::RenderWindow window;
 	sf::Texture tlo;
 	sf::Font font;
+	bool mozliwe_ruchy[3][8][4];
+	sf::Texture zp, zp1;
+	sf::Sprite z_pole, z_pole1;
 	void ustawianie_figur();
 	void wczytanie_tekstur();
 	void wyswietlanie();

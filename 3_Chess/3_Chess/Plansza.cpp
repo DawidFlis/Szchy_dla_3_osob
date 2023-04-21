@@ -7,7 +7,7 @@ void pola_w_tablicy(Pole pola[3][8][4], int sx, int sy, int rozmiar);
 void Plansza::glowna_petla()
 {
     window.create(sf::VideoMode(16000, 9000), "Szachy dla 3 osób", sf::Style::Fullscreen);
-    window.setFramerateLimit(60);
+    window.setFramerateLimit(50);
     wczytanie_tekstur();
     pola_w_tablicy(pola, window.getSize().x / 2, window.getSize().y / 2, w_size);
     ustawianie_figur();
@@ -35,6 +35,7 @@ void Plansza::glowna_petla()
                         {
                             pol_s = i->get_pole();
                             k = i;
+                            k->get_mozliwe_ruchy(mozliwe_ruchy, fig);
                             is_move = 1;
                             dx = k->get_pole().get_wx() - mouse.x;
                             dy = k->get_pole().get_wy() - mouse.y;
@@ -104,18 +105,18 @@ void Plansza::ustawianie_figur()
         fig.push_back(skoczek);
     }
 
-    std::shared_ptr<Figura> krol = std::make_shared<Krol>(pola[0][3][0], w_size);
+    std::shared_ptr<Figura> krol = std::make_shared<Krol>(pola[0][4][0], w_size);
     fig.push_back(krol);
     krol = std::make_shared<Krol>(pola[1][4][0], w_size);
     fig.push_back(krol);
-    krol = std::make_shared<Krol>(pola[2][3][0], w_size);
+    krol = std::make_shared<Krol>(pola[2][4][0], w_size);
     fig.push_back(krol);
 
-    std::shared_ptr<Figura> hetman = std::make_shared<Hetman>(pola[0][4][0], w_size);
+    std::shared_ptr<Figura> hetman = std::make_shared<Hetman>(pola[0][3][0], w_size);
     fig.push_back(hetman);
     hetman = std::make_shared<Hetman>(pola[1][3][0], w_size);
     fig.push_back(hetman);
-    hetman = std::make_shared<Hetman>(pola[2][4][0], w_size);
+    hetman = std::make_shared<Hetman>(pola[2][3][0], w_size);
     fig.push_back(hetman);
 
 }
@@ -149,6 +150,8 @@ void Plansza::wczytanie_tekstur()
     sw.loadFromFile("images/sw.png");
     sw_c.loadFromFile("images/sw_c.png");
     sw_b.loadFromFile("images/sw_b.png");
+    zp.loadFromFile("images/z_pole2.png");
+    zp1.loadFromFile("images/z_pole1.png");
 
     rozpocznij.setTexture(pr);
     wyjdz.setTexture(pw);
@@ -157,6 +160,15 @@ void Plansza::wczytanie_tekstur()
     glosnik.setTexture(g1);
     restart.setTexture(res);
     podswietlenie.setTexture(sw_b);
+
+    z_pole.setTexture(zp);
+    z_pole.setOrigin(zp.getSize().x / 2, zp.getSize().y / 2);
+    z_pole.setScale(w_size * 0.0008, w_size * 0.0008);
+    z_pole1.setTexture(zp1);
+    z_pole1.setOrigin(zp.getSize().x / 2, zp.getSize().y / 2);
+    z_pole1.setScale(w_size * 0.0007, w_size * 0.0007);
+ 
+   
 
     tab.setScale(window.getSize().y * 0.0003, window.getSize().y * 0.0003);
     tab.setOrigin(tabela.getSize().x, 0);
@@ -178,13 +190,14 @@ void Plansza::wczytanie_tekstur()
     podswietlenie.setPosition(window.getSize().x * 0.5, window.getSize().y * 0.5);
     podswietlenie.setScale(window.getSize().y * 0.0005, window.getSize().y * 0.0007);
 
+
     font.loadFromFile("ARIBL0.ttf");
     text.setFont(font);
     std::list<sf::Text> zagrania;
     text.setScale(w_size * 0.0005, w_size * 0.0005);
     text.setPosition(window.getSize().x * 0.915, window.getSize().y * 0.07);
 
-    pola_w_tablicy(pola, window.getSize().x / 2, window.getSize().y / 2, window.getSize().y);
+    //pola_w_tablicy(pola, window.getSize().x / 2, window.getSize().y / 2, window.getSize().y);
 
 
     plansza.setOrigin(p[0].getSize().x / 2, p[0].getSize().y / 2);
@@ -230,9 +243,36 @@ void Plansza::wyswietlanie()
         window.draw(glosnik);
         window.draw(powrot);
         window.draw(restart);
+   
+        if(is_move)
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 8; j++)
+            {
+                for (int kk = 0; kk < 4; kk++)
+                {
+                    if (mozliwe_ruchy[i][j][kk])
+                    {
+                        if ((pola[i][j][kk].get_x() + pola[i][j][kk].get_y()) % 2)
+                        {
+                            z_pole.setPosition(pola[i][j][kk].get_wx(), pola[i][j][kk].get_wy());
+                            window.draw(z_pole);
+                        }
+                        else
+                        {
+                            z_pole1.setPosition(pola[i][j][kk].get_wx(), pola[i][j][kk].get_wy());
+                            window.draw(z_pole1);
+                        }
+                    }
+
+
+                }
+            }
+        }
         for (auto i : fig)
             if (i != k)
                 window.draw(*i);
+   
         window.draw(*k);
         for (auto i = zagrania.begin(); i != zagrania.end(); i++)
             window.draw(*i);
@@ -396,7 +436,7 @@ void Plansza::przeniesienie_figury()
         {
             for (int i3 = 0; i3 < 4; i3++)
             {
-                if (k->get_sprite().getGlobalBounds().contains(pola[i1][i2][i3].get_wx(), pola[i1][i2][i3].get_wy()))
+                if (k->get_sprite().getGlobalBounds().contains(pola[i1][i2][i3].get_wx(), pola[i1][i2][i3].get_wy()) && mozliwe_ruchy[i1][i2][i3]==1)
                 {
 
                     k->set_polozenie(pola[i1][i2][i3]);

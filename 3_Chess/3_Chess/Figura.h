@@ -19,5 +19,6 @@ public:
 	virtual void set_polozenie(Pole)=0;
 	int get_kolor();
 	std::string get_nazwa();
+	virtual void get_mozliwe_ruchy(bool [3][8][4], std::vector<std::shared_ptr<Figura>>&)=0;
 };
 

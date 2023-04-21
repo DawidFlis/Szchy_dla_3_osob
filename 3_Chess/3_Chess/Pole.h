@@ -22,6 +22,6 @@ public:
 	int get_czesc_planszy();
 	void set_position(float , float);
 	std::string get_pole_tab();
-
+	bool operator ==(const Pole& a);
 };
 

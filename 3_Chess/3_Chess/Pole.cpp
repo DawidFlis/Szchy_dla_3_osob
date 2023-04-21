@@ -6,6 +6,15 @@
 
 #define M_PI 3.14159265358979323846
 
+bool Pole::operator ==(const Pole& a)
+{
+	if (czesc_planszy==a.czesc_planszy && x == a.x && y == a.y)
+		return true;
+	else
+		return false;
+}
+
+
 Pole::Pole(int _x, int _y, int _czesc_planszy, int _srodek_szachownicy_x, int _srodek_szachownicy_y, float _rozmiar_szachownicy)
 	:x(_x),
 	y(_y),
@@ -28,7 +37,7 @@ Pole::Pole(int _x, int _y, int _czesc_planszy, int _srodek_szachownicy_x, int _s
 		if (czesc_planszy == 1)
 		{
 			float pwx = wx;
-			wx = (wx-srodek_szachownicy_x) * cos(M_PI *0.66666) - (srodek_szachownicy_y-wy) * sin(M_PI * 0.66666)+srodek_szachownicy_x+ 0.01 * rozmiar_szachownicy;
+			wx = (wx-srodek_szachownicy_x) * cos(M_PI *0.66666) - (srodek_szachownicy_y-wy) * sin(M_PI * 0.66666)+srodek_szachownicy_x+ 0.005 * rozmiar_szachownicy;
 			wy = srodek_szachownicy_y-(pwx - srodek_szachownicy_x) * sin(M_PI * 0.66666) - (srodek_szachownicy_y - wy) * cos(M_PI * 0.66666)- 0.01 * rozmiar_szachownicy;
 			if (y < 3)
 			{
@@ -48,7 +57,7 @@ Pole::Pole(int _x, int _y, int _czesc_planszy, int _srodek_szachownicy_x, int _s
 		else if (czesc_planszy == 2)
 		{
 			float pwx = wx;
-			wx = (wx - srodek_szachownicy_x) * cos(M_PI * 1.333333) - (srodek_szachownicy_y - wy) * sin(M_PI * 1.333333) + srodek_szachownicy_x - 0.01 * rozmiar_szachownicy;
+			wx = (wx - srodek_szachownicy_x) * cos(M_PI * 1.333333) - (srodek_szachownicy_y - wy) * sin(M_PI * 1.333333) + srodek_szachownicy_x - 0.005 * rozmiar_szachownicy;
 			wy = srodek_szachownicy_y - (pwx - srodek_szachownicy_x) * sin(M_PI * 1.333333) - (srodek_szachownicy_y - wy) * cos(M_PI * 1.333333) - 0.01 * rozmiar_szachownicy;
 			if (x > 3)
 				pole_tab = std::string() + (char)('H' - x) + (char)('8' - y);

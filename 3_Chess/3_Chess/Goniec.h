@@ -16,4 +16,5 @@ public:
 	sf::Sprite get_sprite();
 	void set_position(float, float);
 	void set_polozenie(Pole);
+	void get_mozliwe_ruchy(bool[3][8][4], std::vector<std::shared_ptr<Figura>>&);
 };
