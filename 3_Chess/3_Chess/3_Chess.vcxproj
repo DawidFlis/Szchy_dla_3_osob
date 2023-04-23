@@ -71,20 +71,20 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>D:\dawid\CPP\3_Chess\3_Chess\SFML-2.5.1\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\dawid\CPP\3_Chess\3_Chess\SFML-2.5.1\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>D:\dawid\CPP\3_Chess\3_Chess\SFML-2.5.1\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\dawid\CPP\3_Chess\3_Chess\SFML-2.5.1\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>D:\dawid\CPP\3_Chess\3_Chess\SFML-2.5.1\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\dawid\CPP\3_Chess\3_Chess\SFML-2.5.1\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>D:\dawid\CPP\3_Chess\3_Chess\SFML-2.5.1\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\dawid\CPP\3_Chess\3_Chess\SFML-2.5.1\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

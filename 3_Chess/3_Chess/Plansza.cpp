@@ -62,6 +62,13 @@ void Plansza::glowna_petla()
 void Plansza::ustawianie_figur()
 {
 
+    std::shared_ptr<Figura> krol = std::make_shared<Krol>(pola[0][4][0], w_size);
+    fig.push_back(krol);
+    krol = std::make_shared<Krol>(pola[1][4][0], w_size);
+    fig.push_back(krol);
+    krol = std::make_shared<Krol>(pola[2][4][0], w_size);
+    fig.push_back(krol);
+
     for (int ii = 0; ii < 8; ii++)
     {
         std::shared_ptr<Figura> pionekb = std::make_shared<Pionek>(pola[0][ii][1], w_size);
@@ -104,13 +111,6 @@ void Plansza::ustawianie_figur()
         skoczek = std::make_shared<Skoczek>(pola[j][6][0], w_size);
         fig.push_back(skoczek);
     }
-
-    std::shared_ptr<Figura> krol = std::make_shared<Krol>(pola[0][4][0], w_size);
-    fig.push_back(krol);
-    krol = std::make_shared<Krol>(pola[1][4][0], w_size);
-    fig.push_back(krol);
-    krol = std::make_shared<Krol>(pola[2][4][0], w_size);
-    fig.push_back(krol);
 
     std::shared_ptr<Figura> hetman = std::make_shared<Hetman>(pola[0][3][0], w_size);
     fig.push_back(hetman);

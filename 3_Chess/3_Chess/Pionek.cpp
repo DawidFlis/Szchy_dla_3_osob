@@ -56,8 +56,11 @@ void Pionek::get_mozliwe_ruchy(bool t[3][8][4], std::vector<std::shared_ptr<Figu
 					if (i->get_pole().get_x() == this->get_pole().get_x())
 					{
 						if (i->get_pole().get_y() == this->get_pole().get_y() + 1)
+						{
 							t[this->get_kolor()][this->get_pole().get_x()][this->get_pole().get_y() + 1] = 0;
-						if (i->get_pole().get_y() == this->get_pole().get_y() + 2)
+							t[this->get_kolor()][this->get_pole().get_x()][this->get_pole().get_y() + 2] = 0;
+						}
+						else if (i->get_pole().get_y() == this->get_pole().get_y() + 2)
 							t[this->get_kolor()][this->get_pole().get_x()][this->get_pole().get_y() + 2] = 0;
 					}
 					else if(this->get_kolor() != i->get_kolor())
@@ -79,36 +82,47 @@ void Pionek::get_mozliwe_ruchy(bool t[3][8][4], std::vector<std::shared_ptr<Figu
 			{
 				t[(this->get_pole().get_czesc_planszy() + 2) % 3][7 - this->get_pole().get_x()][this->get_pole().get_y()] = 1;
 				for (auto i : fig)
-					if ( i->get_pole().get_y() == this->get_pole().get_y() && i->get_pole().get_czesc_planszy() == (this->get_pole().get_czesc_planszy() + 2) % 3)
-						if(i->get_pole().get_x() == 7 - this->get_pole().get_x())
+					if (i->get_pole().get_y() == 3)
+					{
+						if (i->get_pole().get_x() == 7 - this->get_pole().get_x() && i->get_pole().get_czesc_planszy() == (this->get_pole().get_czesc_planszy() + 2) % 3)
 						{
 							t[(this->get_pole().get_czesc_planszy() + 2) % 3][7 - this->get_pole().get_x()][this->get_pole().get_y()] = 0;
 						}
-						else if (this->get_kolor() != i->get_kolor())
+						else if (this->get_kolor() != i->get_kolor() && i->get_pole().get_czesc_planszy() == (this->get_pole().get_czesc_planszy() + 2) % 3)
 						{
-							if (i->get_pole().get_x() == 6- this->get_pole().get_x())
-								t[(this->get_pole().get_czesc_planszy() + 2) % 3][6 - this->get_pole().get_x()][this->get_pole().get_y()] = 1;
-							else if (i->get_pole().get_x() == 8- this->get_pole().get_x())
-								t[(this->get_pole().get_czesc_planszy() + 2) % 3][8 - this->get_pole().get_x()][this->get_pole().get_y()] = 1;
+							if (i->get_pole().get_x() == 6 - this->get_pole().get_x())
+								t[(this->get_pole().get_czesc_planszy() + 2) % 3][6 - this->get_pole().get_x()][3] = 1;
+							else if (i->get_pole().get_x() == 8 - this->get_pole().get_x())
+								t[(this->get_pole().get_czesc_planszy() + 2) % 3][8 - this->get_pole().get_x()][3] = 1;
 						}
+						if (this->get_kolor() != i->get_kolor() && i->get_pole().get_czesc_planszy() == (this->get_pole().get_czesc_planszy() + 1) % 3)
+							if (this->get_pole().get_x() == 3 && i->get_pole().get_x() == 3)
+								t[(this->get_pole().get_czesc_planszy() + 1) % 3][3][3] = 1;
+					}
 
 			}
 			else
 			{
 				t[(this->get_pole().get_czesc_planszy() + 1) % 3][7 - this->get_pole().get_x()][this->get_pole().get_y()] = 1;
 				for (auto i : fig)
-					if ( i->get_pole().get_y() == this->get_pole().get_y() && i->get_pole().get_czesc_planszy() == (this->get_pole().get_czesc_planszy() + 1) % 3)
-						if(i->get_pole().get_x() == 7 - this->get_pole().get_x())
+					if (i->get_pole().get_y() == 3)
+					{
+						if (i->get_pole().get_x() == 7 - this->get_pole().get_x() && i->get_pole().get_czesc_planszy() == (this->get_pole().get_czesc_planszy() + 1) % 3)
 						{
 							t[(this->get_pole().get_czesc_planszy() + 1) % 3][7 - this->get_pole().get_x()][this->get_pole().get_y()] = 0;
 						}
-						else if (this->get_kolor() != i->get_kolor())
+						else if (this->get_kolor() != i->get_kolor() && i->get_pole().get_czesc_planszy() == (this->get_pole().get_czesc_planszy() + 1) % 3)
 						{
 							if (i->get_pole().get_x() == 6 - this->get_pole().get_x())
-								t[(this->get_pole().get_czesc_planszy() + 1) % 3][6 - this->get_pole().get_x()][this->get_pole().get_y()] = 1;
+								t[(this->get_pole().get_czesc_planszy() + 1) % 3][6 - this->get_pole().get_x()][3] = 1;
 							else if (i->get_pole().get_x() == 8 - this->get_pole().get_x())
-								t[(this->get_pole().get_czesc_planszy() + 1) % 3][8 - this->get_pole().get_x()][this->get_pole().get_y()] = 1;
+								t[(this->get_pole().get_czesc_planszy() + 1) % 3][8 - this->get_pole().get_x()][3] = 1;
 						}
+						if (this->get_kolor() != i->get_kolor() && i->get_pole().get_czesc_planszy() == (this->get_pole().get_czesc_planszy() + 2) % 3)
+							if (this->get_pole().get_x() == 4 && i->get_pole().get_x() == 4)
+								t[(this->get_pole().get_czesc_planszy() + 2) % 3][4][3] = 1;
+					}
+
 			}
 		}
 		else

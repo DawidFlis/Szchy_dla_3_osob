@@ -75,7 +75,7 @@ void Wieza::get_mozliwe_ruchy(bool t[3][8][4], std::vector<std::shared_ptr<Figur
 							&& j->get_pole().get_y() == i)
 						{
 							if (this->get_kolor() == j->get_kolor())
-								t[(this->get_pole().get_czesc_planszy() + 2) % 3][this->get_pole().get_x()][i] = 0;
+								t[(this->get_pole().get_czesc_planszy() + 2) % 3][7 - this->get_pole().get_x()][i] = 0;
 							przeciecie = 1;
 						}
 				}
@@ -93,7 +93,7 @@ void Wieza::get_mozliwe_ruchy(bool t[3][8][4], std::vector<std::shared_ptr<Figur
 							&& j->get_pole().get_y() == i)
 						{
 							if (this->get_kolor() == j->get_kolor())
-								t[(this->get_pole().get_czesc_planszy() + 1) % 3][this->get_pole().get_x()][i] = 0;
+								t[(this->get_pole().get_czesc_planszy() + 1) % 3][7 - this->get_pole().get_x()][i] = 0;
 							przeciecie = 1;
 						}
 				}

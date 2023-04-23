@@ -65,30 +65,45 @@ void Goniec::get_mozliwe_ruchy(bool t[3][8][4], std::vector<std::shared_ptr<Figu
 			}
 		}
 
-		if (!przeciecie && this->get_pole().get_x() + i > 2 && this->get_pole().get_x() + i < 7)
+		if (!przeciecie && this->get_pole().get_x() + i-1 > 2 && this->get_pole().get_x() + i-1 < 7)
 		{
-			//t[(this->get_pole().get_czesc_planszy()+1)%3][7-this->get_pole().get_x()-i ][3] = 1;
 			for (int k = 0; k <= 3; k++)
 			{
 				if (!przeciecie && this->get_pole().get_x()+i + k < 8)
 				{
 					t[(this->get_pole().get_czesc_planszy() + 1) % 3][7 - this->get_pole().get_x() - i-k][3-k] = 1;
-					
+
+					for (auto j : fig)
+						if ((this->get_pole().get_czesc_planszy()+1)%3 == j->get_pole().get_czesc_planszy() && 7-this->get_pole().get_x() - i-k == j->get_pole().get_x()
+							&& j->get_pole().get_y() == 3-k)
+						{
+							if (this->get_kolor() == j->get_kolor())
+								t[(this->get_pole().get_czesc_planszy() + 1) % 3][7 - this->get_pole().get_x() - i - k][3 - k] = 0;
+							przeciecie = 1;
+						}
 				}
-				//i++;
+
 			}
+			przeciecie = 0;
 		}
-		if (!przeciecie && this->get_pole().get_x() + i > 0 && this->get_pole().get_x() + i < 5)
+		if (!przeciecie && this->get_pole().get_x() + i-1 >= 0 && this->get_pole().get_x() + i -1< 4)
 		{
-			//t[(this->get_pole().get_czesc_planszy()+1)%3][7-this->get_pole().get_x()-i ][3] = 1;
 			for (int k = 0; k <= 3; k++)
 			{
 				if (!przeciecie && this->get_pole().get_x() + i + k < 8)
 				{
 					t[(this->get_pole().get_czesc_planszy() + 2) % 3][7 - this->get_pole().get_x() - i - k][3 - k] = 1;
 
+					for (auto j : fig)
+						if ((this->get_pole().get_czesc_planszy() + 2) % 3 == j->get_pole().get_czesc_planszy() && 7-this->get_pole().get_x() - i - k == j->get_pole().get_x()
+							&& j->get_pole().get_y() == 3 - k)
+						{
+							if (this->get_kolor() == j->get_kolor())
+								t[(this->get_pole().get_czesc_planszy() + 2) % 3][7 - this->get_pole().get_x() - i - k][3 - k] = 0;
+							przeciecie = 1;
+						}
+
 				}
-				//i++;
 			}
 		}
 	}
@@ -111,30 +126,42 @@ void Goniec::get_mozliwe_ruchy(bool t[3][8][4], std::vector<std::shared_ptr<Figu
 					}
 			}
 		}
-		if (!przeciecie && this->get_pole().get_x() - i > 2 && this->get_pole().get_x() - i < 7)
+		if (!przeciecie && this->get_pole().get_x() - i+1 > 3 && this->get_pole().get_x() - i +1< 8)
 		{
-			//t[(this->get_pole().get_czesc_planszy()+1)%3][7-this->get_pole().get_x()-i ][3] = 1;
 			for (int k = 0; k <= 3; k++)
 			{
 				if (!przeciecie && this->get_pole().get_x() - i - k >= 0)
 				{
 					t[(this->get_pole().get_czesc_planszy() + 1) % 3][7 - this->get_pole().get_x() + i + k][3 - k] = 1;
 
+					for (auto j : fig)
+						if ((this->get_pole().get_czesc_planszy() + 1) % 3 == j->get_pole().get_czesc_planszy() && 7-this->get_pole().get_x() + i + k == j->get_pole().get_x()
+							&& j->get_pole().get_y() == 3 - k)
+						{
+							if (this->get_kolor() == j->get_kolor())
+								t[(this->get_pole().get_czesc_planszy() + 1) % 3][7 - this->get_pole().get_x() + i + k][3 - k] = 0;
+							przeciecie = 1;
+						}
 				}
-				//i++;
 			}
+			przeciecie = 0;
 		}
-		if (!przeciecie && this->get_pole().get_x() - i > 0 && this->get_pole().get_x() - i < 5)
+		if (!przeciecie && this->get_pole().get_x() - i+1 >= 0 && this->get_pole().get_x() - i+1 <5)
 		{
-			//t[(this->get_pole().get_czesc_planszy()+1)%3][7-this->get_pole().get_x()-i ][3] = 1;
 			for (int k = 0; k <= 3; k++)
 			{
 				if (!przeciecie && this->get_pole().get_x() - i - k >= 0)
 				{
 					t[(this->get_pole().get_czesc_planszy() + 2) % 3][7 - this->get_pole().get_x() + i + k][3 - k] = 1;
-
+					for (auto j : fig)
+						if ((this->get_pole().get_czesc_planszy() + 2) % 3 == j->get_pole().get_czesc_planszy() && 7 - this->get_pole().get_x() + i + k == j->get_pole().get_x()
+							&& j->get_pole().get_y() == 3 - k)
+						{
+							if (this->get_kolor() == j->get_kolor())
+								t[(this->get_pole().get_czesc_planszy() + 2) % 3][7 - this->get_pole().get_x() + i + k][3 - k] = 0;
+							przeciecie = 1;
+						}
 				}
-				//i++;
 			}
 		}
 
