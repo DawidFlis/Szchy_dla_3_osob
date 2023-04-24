@@ -438,6 +438,9 @@ void Plansza::przeniesienie_figury()
             {
                 if (k->get_sprite().getGlobalBounds().contains(pola[i1][i2][i3].get_wx(), pola[i1][i2][i3].get_wy()) && mozliwe_ruchy[i1][i2][i3]==1)
                 {
+                    for (auto j = fig.begin(); j!=fig.end();j++)
+                        if ((*j)->get_pole() == pola[i1][i2][i3])
+                            fig.erase(j);
 
                     k->set_polozenie(pola[i1][i2][i3]);
                     poprawne_przeniesienie = 1;
