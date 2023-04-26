@@ -29,6 +29,7 @@ class Plansza
 	sf::Texture p[7];
 	int w_size;
 	Pole pola[3][8][4];
+	//bool szach_pola[3][8][4];
 	sf::Sprite plansza;
 	sf::RenderWindow window;
 	sf::Texture tlo;
@@ -39,7 +40,7 @@ class Plansza
 	void ustawianie_figur();
 	void wczytanie_tekstur();
 	void wyswietlanie();
-	bool usun_p1 = 0, usun_p2 = 0, menu = 1, cala_plansza = 0, przejscie1 = 0, przejscie2 = 0;
+	bool usun_p1 = 0, usun_p2 = 0, menu = 1, cala_plansza = 0, przejscie1 = 0, przejscie2 = 0, szach=0;
 	std::shared_ptr<Figura> k;
 	void przejscia_menu_plansza();
 	int i = 0;
@@ -52,6 +53,7 @@ class Plansza
 	sf::Vector2f mouse;
 	void przyciski_na_planszy();
 	void przeniesienie_figury();
+	bool spr_szach(std::shared_ptr<Figura>&);
 
 public:
 	void glowna_petla();

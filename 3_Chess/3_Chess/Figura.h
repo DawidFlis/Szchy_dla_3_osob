@@ -20,5 +20,6 @@ public:
 	int get_kolor();
 	std::string get_nazwa();
 	virtual void get_mozliwe_ruchy(bool [3][8][4], std::vector<std::shared_ptr<Figura>>&)=0;
+	virtual void get_mozliwe_bicia(bool[3][8][4], std::vector<std::shared_ptr<Figura>>&);
 };
 

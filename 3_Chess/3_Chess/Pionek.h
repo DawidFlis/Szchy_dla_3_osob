@@ -17,4 +17,5 @@ public:
 	void set_position(float, float);
 	void set_polozenie(Pole);
 	void get_mozliwe_ruchy(bool [3][8][4], std::vector<std::shared_ptr<Figura>>&);
+	void get_mozliwe_bicia(bool[3][8][4], std::vector<std::shared_ptr<Figura>>&) override;
 };

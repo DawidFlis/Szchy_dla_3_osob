@@ -29,3 +29,8 @@ std::string Figura::get_nazwa()
 {
 	return nazwa;
 }
+
+void Figura::get_mozliwe_bicia(bool t[3][8][4], std::vector<std::shared_ptr<Figura>>&fig)
+{
+	this->get_mozliwe_ruchy(t, fig);
+}

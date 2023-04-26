@@ -160,3 +160,55 @@ void Pionek::get_mozliwe_ruchy(bool t[3][8][4], std::vector<std::shared_ptr<Figu
 	}
 
 }
+
+
+
+
+void Pionek::get_mozliwe_bicia(bool t[3][8][4], std::vector<std::shared_ptr<Figura>>& fig)
+{
+	for (int i = 0; i < 3; i++)
+		for (int j = 0; j < 8; j++)
+			for (int k = 0; k < 4; k++)
+				t[i][j][k] = 0;
+
+	if (this->get_kolor() == this->get_pole().get_czesc_planszy())
+	{
+		if (this->get_pole().get_y() < 3)
+		{
+			if (8 > this->get_pole().get_x() + 1)
+				t[this->get_kolor()][this->get_pole().get_x() + 1][this->get_pole().get_y() + 1] = 1;
+			if (0 <= this->get_pole().get_x() - 1)
+				t[this->get_kolor()][this->get_pole().get_x() - 1][this->get_pole().get_y() + 1] = 1;
+		}
+		else if (this->get_pole().get_y() == 3)
+		{
+			if (this->get_pole().get_x() < 4)
+			{
+
+				t[(this->get_pole().get_czesc_planszy() + 2) % 3][6 - this->get_pole().get_x()][3] = 1;
+				if (this->get_pole().get_x() != 0)
+					t[(this->get_pole().get_czesc_planszy() + 2) % 3][8 - this->get_pole().get_x()][3] = 1;
+				if (this->get_pole().get_x() == 3)
+					t[(this->get_pole().get_czesc_planszy() + 1) % 3][3][3] = 1;
+			}
+			else
+			{
+
+				if (0 <= 6 - this->get_pole().get_x())
+					t[(this->get_pole().get_czesc_planszy() + 1) % 3][6 - this->get_pole().get_x()][3] = 1;
+				t[(this->get_pole().get_czesc_planszy() + 1) % 3][8 - this->get_pole().get_x()][3] = 1;
+				if (this->get_pole().get_x() == 4)
+					t[(this->get_pole().get_czesc_planszy() + 2) % 3][4][3] = 1;
+
+			}
+		}
+	}
+	else if (this->get_pole().get_wy() > 0)
+	{
+		if (8 > this->get_pole().get_x() + 1)
+			t[this->get_pole().get_czesc_planszy()][this->get_pole().get_x() + 1][this->get_pole().get_y() - 1] = 1;
+		if (0 <= this->get_pole().get_x() - 1)
+			t[this->get_pole().get_czesc_planszy()][this->get_pole().get_x() - 1][this->get_pole().get_y() - 1] = 1;
+	}
+
+}

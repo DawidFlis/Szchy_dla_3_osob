@@ -425,11 +425,27 @@ void Plansza::przyciski_na_planszy()
 }
 
 
+bool Plansza::spr_szach(std::shared_ptr<Figura>& krol)
+{
+
+    for (auto i : fig)
+    {
+        if (i->get_kolor() != krol->get_kolor())
+        {
+            i->get_mozliwe_bicia(mozliwe_ruchy, fig);
+
+            if (mozliwe_ruchy[krol->get_pole().get_czesc_planszy()][krol->get_pole().get_x()][krol->get_pole().get_y()] == 1)
+               return 1;
+        }
+    }
+    return 0;
+}
 
 
 void Plansza::przeniesienie_figury()
 {
     is_move = 0;
+  
     for (int i1 = 0; i1 < 3; i1++)
     {
         for (int i2 = 0; i2 < 8; i2++)
@@ -438,11 +454,16 @@ void Plansza::przeniesienie_figury()
             {
                 if (k->get_sprite().getGlobalBounds().contains(pola[i1][i2][i3].get_wx(), pola[i1][i2][i3].get_wy()) && mozliwe_ruchy[i1][i2][i3]==1)
                 {
+                   
                     for (auto j = fig.begin(); j!=fig.end();j++)
                         if ((*j)->get_pole() == pola[i1][i2][i3])
                             fig.erase(j);
 
                     k->set_polozenie(pola[i1][i2][i3]);
+
+                    if (spr_szach(fig[0]) || spr_szach(fig[1]) || spr_szach(fig[2]))
+                        std::cout << "Szach!" << std::endl;
+
                     poprawne_przeniesienie = 1;
                     ruch += 1;
                     ruch = ruch % 3;

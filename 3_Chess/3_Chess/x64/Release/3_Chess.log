@@ -188,11 +188,11 @@ D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(420,75): warning C
 D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(420,45): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(423,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(423,45): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(462,82): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(498,61): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(484,82): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(520,61): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Generating code
-  29 of 496 functions ( 5.8%) were compiled, the rest were copied from previous compilation.
-    16 functions were new in current compilation
-    33 functions had inline decision re-evaluated but remain unchanged
+  0 of 508 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   3_Chess.vcxproj -> D:\dawid\3_chess\Szchy_dla_3_osob\3_Chess\x64\Release\3_Chess.exe
