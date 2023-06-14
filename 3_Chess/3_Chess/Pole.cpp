@@ -14,6 +14,14 @@ bool Pole::operator ==(const Pole& a)
 		return false;
 }
 
+bool Pole::operator !=(const Pole& a)
+{
+	if (czesc_planszy != a.czesc_planszy || x != a.x || y != a.y)
+		return true;
+	else
+		return false;
+}
+
 
 Pole::Pole(int _x, int _y, int _czesc_planszy, int _srodek_szachownicy_x, int _srodek_szachownicy_y, float _rozmiar_szachownicy)
 	:x(_x),

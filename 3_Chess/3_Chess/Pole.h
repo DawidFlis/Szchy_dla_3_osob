@@ -23,5 +23,6 @@ public:
 	void set_position(float , float);
 	std::string get_pole_tab();
 	bool operator ==(const Pole& a);
+	bool operator !=(const Pole& a);
 };
 

@@ -11,6 +11,9 @@
 #include "Krol.h"
 #include "Hetman.h"
 #include <list>
+#include <regex>
+#include <chrono>
+#include <thread>
 
 class Plansza
 {
@@ -29,7 +32,6 @@ class Plansza
 	sf::Texture p[7];
 	int w_size;
 	Pole pola[3][8][4];
-	//bool szach_pola[3][8][4];
 	sf::Sprite plansza;
 	sf::RenderWindow window;
 	sf::Texture tlo;
@@ -40,7 +42,7 @@ class Plansza
 	void ustawianie_figur();
 	void wczytanie_tekstur();
 	void wyswietlanie();
-	bool usun_p1 = 0, usun_p2 = 0, menu = 1, cala_plansza = 0, przejscie1 = 0, przejscie2 = 0, szach=0;
+	bool usun_p1 = 0, usun_p2 = 0, menu = 1, cala_plansza = 0, przejscie1 = 0, przejscie2 = 0, szach[3] = { 0, 0, 0 };
 	std::shared_ptr<Figura> k;
 	void przejscia_menu_plansza();
 	int i = 0;
@@ -54,7 +56,22 @@ class Plansza
 	void przyciski_na_planszy();
 	void przeniesienie_figury();
 	bool spr_szach(std::shared_ptr<Figura>&);
-
+	bool wp_nazw = 1;
+	std::string playerInput;
+	sf::Text nazwa_b, nazwa_r, nazwa_w;
+	sf::Text tczasy[3];
+	void wprowadzanie_nazw();
+	sf::Texture n;
+	sf::Sprite nazwy;
+	int aktualna_nazwa=0;
+	int czasy[3]={6000,6000,6000};
+	sf::Text kolej_g, kolej_gn, szachh;
+	sf::Texture cz[4], zat;
+	sf::Sprite tryb[4], z_tryb;
+	int nr_trybu = 1;
+	bool spr_mat(std::shared_ptr<Figura>& krol);
+	bool mat = 0, kon_czasu=0;
+	
 public:
 	void glowna_petla();
 };
