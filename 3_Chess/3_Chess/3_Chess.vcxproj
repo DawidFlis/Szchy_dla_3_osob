@@ -83,8 +83,8 @@
     <LibraryPath>C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\dawid\OneDrive\Pulpit\ch3\Szchy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -137,13 +137,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Photon-cpp\inc;D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Common-cpp\inc;D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\LoadBalancing-cpp\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;Common-cpp_vc17_release_windows_md_x64.lib;Photon-cpp_vc17_release_windows_md_x64.lib;LoadBalancing-cpp_vc17_release_windows_md_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Photon-cpp\lib;D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Common-cpp\lib;D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\LoadBalancing-cpp\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -152,6 +154,7 @@
     <ClCompile Include="Goniec.cpp" />
     <ClCompile Include="Hetman.cpp" />
     <ClCompile Include="Krol.cpp" />
+    <ClCompile Include="MyPhotonListener.cpp" />
     <ClCompile Include="Pionek.cpp" />
     <ClCompile Include="Plansza.cpp" />
     <ClCompile Include="Pole.cpp" />
@@ -163,6 +166,7 @@
     <ClInclude Include="Goniec.h" />
     <ClInclude Include="Hetman.h" />
     <ClInclude Include="Krol.h" />
+    <ClInclude Include="MyPhotonListener.h" />
     <ClInclude Include="Pionek.h" />
     <ClInclude Include="Plansza.h" />
     <ClInclude Include="Pole.h" />

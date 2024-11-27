@@ -14,9 +14,12 @@
 #include <regex>
 #include <chrono>
 #include <thread>
+#include <atomic>
+#include "MyPhotonListener.h"
 
 class Plansza
 {
+
 	std::vector<std::shared_ptr<Figura>> fig; 
 	sf::Sprite rozpocznij;  
 	sf::Sprite wyjdz; 
@@ -54,7 +57,8 @@ class Plansza
 	int ruch = 0;
 	sf::Vector2f mouse;
 	void przyciski_na_planszy();
-	void przeniesienie_figury();
+	void przeniesienie_figury(ExitGames::LoadBalancing::Client&);
+	void przeniesienie_figury_przeciwnika();
 	bool spr_szach(std::shared_ptr<Figura>&);
 	bool wp_nazw = 1;
 	std::string playerInput;
@@ -73,6 +77,7 @@ class Plansza
 	bool mat = 0, kon_czasu=0;
 	
 public:
+	void clientServiceLoop(Client& client);
 	void glowna_petla();
 };
 
