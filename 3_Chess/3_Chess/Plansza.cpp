@@ -21,13 +21,26 @@ void odliczanie()
 
 void Plansza::clientServiceLoop(Client& client) {
     int previous_turn = 0;
+    int prev_players = 1;
     while (running) {
         client.service();
+        
+        if (host && menu && players!=prev_players)
+        {
+            Common::Hashtable eventContent;
+            eventContent.put("mode", nr_trybu);
+            nByte eventCode = 1;
+            ExitGames::LoadBalancing::RaiseEventOptions options;
+            bool eventSent = client.opRaiseEvent(true, eventContent, eventCode, options);
+            prev_players = players;
+        }
+    
+       
+       
+     
         std::this_thread::sleep_for(std::chrono::milliseconds(10));
         if (!listener.receivedEventData.empty()) {
             if (listener.receivedEventData["turn"] != previous_turn) {
-              //  przeniesienie_figury_przeciwnika();
-                std::cout << "Zawartoœæ eventData w listenerze:" << listener.receivedEventData["from_part"] << std::endl;
                 previous_turn = listener.receivedEventData["turn"];
                 ruch = previous_turn;
                 przeniesienie_figury_przeciwnika();
@@ -61,8 +74,8 @@ void Plansza::glowna_petla()
     nazwa_b.setPosition(w_size * 0.715, w_size * 0.37);
 
 
-    const ExitGames::Common::JString appId = "3bf3141a-2fda-4b2f-add5-cb80b8d0bb1f";          // Zast¹p APP_ID swoim APP_ID z Photon Dashboard
-    const ExitGames::Common::JString appVersion = "1.0";             // Wersja aplikacji
+    const ExitGames::Common::JString appId = "3bf3141a-2fda-4b2f-add5-cb80b8d0bb1f";         
+    const ExitGames::Common::JString appVersion = "1.0";       
     const ExitGames::Common::JString region = "us";
 
   //  MyPhotonListener listener;
@@ -70,12 +83,12 @@ void Plansza::glowna_petla()
 
     // Po³¹czenie z serwerem
     client.connect(/*ExitGames::LoadBalancing::ConnectOptions().setServerAddress(region)*/);
-
+    
     bool roomCreated = false;
     bool attemptedJoinOrCreate = false;
 
     std::thread serviceThread(&Plansza::clientServiceLoop, this , std::ref(client));
-    //serviceThread.detach();
+
 
 
     k = fig[0];
@@ -85,6 +98,7 @@ void Plansza::glowna_petla()
    
     while (window.isOpen() && running)
     {
+
         
         mouse = (sf::Vector2f)sf::Mouse::getPosition(window);
         if (cala_plansza)
@@ -130,50 +144,34 @@ void Plansza::glowna_petla()
             client.opJoinOrCreateRoom(roomName);
             attemptedJoinOrCreate = true;
         }
+        if (client.getCurrentlyJoinedRoom().getMasterClientID() == client.getLocalPlayer().getNumber())
+            host = true;
+        else
+            host = false;
       
         playerNr = (client.getLocalPlayer().getNumber() - 1) % 3;
+        if (!host && client.getState() == PeerStates::Joined)
+        {
+            nr_trybu = listener.receivedEventData["mode"];
+            z_tryb.setPosition(tryb[nr_trybu].getPosition());
+            host_started = listener.receivedEventData["host_started"];
+        }
 
-        //if (client.getState() == PeerStates::Joined) {
-        //    int playerNr = client.getLocalPlayer().getNumber();
+        players = client.getCurrentlyJoinedRoom().getPlayerCount();
+     
 
-        //    if (listener.currentTurn == playerNr) {
-        //        int liczba;
-        //        std::cout << "Twoja kolej! Podaj liczbê: ";
-        //        std::cin >> liczba;
-        //        liczba = 2;
+        if (menu == 1)
+            obsluga_menu(std::ref(client));
 
-        //        Common::Hashtable eventContent;
-        //        eventContent.put("liczba", liczba);
-
-        //        int nextTurn = (playerNr % 3) + 1;
-        //        eventContent.put("turn", nextTurn);
-
-        //        nByte eventCode = 1;
-        //        ExitGames::LoadBalancing::RaiseEventOptions options;
-        //        options.setReceiverGroup(Lite::ReceiverGroup::ALL);
-        //        bool eventSent = client.opRaiseEvent(true, eventContent, eventCode, options);
-
-        //        std::cout << "Zdarzenie wys³ane: " << (eventSent ? "sukces" : "b³¹d") << std::endl;
-
-        //        listener.waitingForResponse = true;
-        //        while (listener.waitingForResponse) {
-        //            std::this_thread::sleep_for(std::chrono::milliseconds(100)); // Ma³e opóŸnienie
-        //        }
-        //    }
-        //}
-
-
+        if (wp_nazw)
+            wprowadzanie_nazw();
 
         while (window.pollEvent(event))
         {
 
             if (event.type == sf::Event::Closed)
                 window.close();
-            if (menu == 1)
-                obsluga_menu();
-
-            if (wp_nazw)
-                wprowadzanie_nazw();
+        
 
 
 
@@ -193,10 +191,12 @@ void Plansza::glowna_petla()
             if (event.type == sf::Event::MouseButtonReleased && is_move)
                 if (event.key.code == sf::Mouse::Left)
                     przeniesienie_figury(std::ref(client));
+            
         }
 
         if (is_move)
             k->set_position(mouse.x + dx, mouse.y + dy);
+
 
         przejscia_menu_plansza();
         wyswietlanie();
@@ -213,7 +213,7 @@ void Plansza::glowna_petla()
 void Plansza::wprowadzanie_nazw()
 {
     
-   /* std::regex reg("[A-Z]\\w{4,14}");
+    std::regex reg("[A-Z]\\w{4,14}");
     std::regex reg1("[a-z]");
   
     if (event.key.code == sf::Keyboard::BackSpace)
@@ -255,7 +255,7 @@ void Plansza::wprowadzanie_nazw()
     {
         playerInput = "";
     }
-    kolej_gn.setString(nazwa_w.getString());*/
+    kolej_gn.setString(nazwa_w.getString());
 
 
 
@@ -357,6 +357,7 @@ void Plansza::wczytanie_tekstur()
 
 
     pr.loadFromFile("images/rozpocznij2.png");
+    oczekiwanie.loadFromFile("images/oczekiwanie.png");
     pw.loadFromFile("images/wyjdz.png");
     pp.loadFromFile("images/powrot1.png");
     tabela.loadFromFile("images/tabela.png");
@@ -368,6 +369,9 @@ void Plansza::wczytanie_tekstur()
     sw_b.loadFromFile("images/sw_b.png");
     zp.loadFromFile("images/z_pole2.png");
     zp1.loadFromFile("images/z_pole1.png");
+    lg1.loadFromFile("images/graczywpok1.png");
+    lg2.loadFromFile("images/graczywpok2.png");
+    lg3.loadFromFile("images/graczywpok3.png");
 
     rozpocznij.setTexture(pr);
     wyjdz.setTexture(pw);
@@ -376,6 +380,7 @@ void Plansza::wczytanie_tekstur()
     glosnik.setTexture(g1);
     restart.setTexture(res);
     podswietlenie.setTexture(sw_b);
+    liczba_graczy.setTexture(lg1);
 
     z_pole.setTexture(zp);
     z_pole.setOrigin(zp.getSize().x / 2, zp.getSize().y / 2);
@@ -421,10 +426,14 @@ void Plansza::wczytanie_tekstur()
     wyjdz.setOrigin(sf::Vector2f(pr.getSize().x / 2, pr.getSize().y / 2));
     wyjdz.setScale((float)window.getSize().y / pr.getSize().x * 0.4, (float)window.getSize().y / pr.getSize().x * 0.4);
 
+    liczba_graczy.setOrigin(sf::Vector2f(pr.getSize().x / 2, pr.getSize().y / 2));
+    liczba_graczy.setScale((float)window.getSize().y / pr.getSize().x * 0.4, (float)window.getSize().y / pr.getSize().x * 0.4);
+
 
     plansza.setPosition(window.getSize().x / 2, window.getSize().y / 2);
     rozpocznij.setPosition(window.getSize().x / 2, window.getSize().y / 2.15);
     wyjdz.setPosition(window.getSize().x / 2, window.getSize().y / 1.5);
+    liczba_graczy.setPosition(window.getSize().x / 2, window.getSize().y / 1.3);
 
 
     plansza.setScale(1 + (float)window.getSize().y / p[0].getSize().y * 0.98, 1 + (float)window.getSize().y / p[0].getSize().y * 0.98);
@@ -507,12 +516,23 @@ void Plansza::wyswietlanie()
 
     if (usun_p1 == 0 &&  !wp_nazw)
     {
+        if (!host)
+            rozpocznij.setTexture(oczekiwanie);
+        else
+            rozpocznij.setTexture(pr);
         window.draw(rozpocznij);
-     
+       
     }
 
     if (menu && !wp_nazw)
     {
+        if (players == 1)
+            liczba_graczy.setTexture(lg1);
+        else if (players == 2)
+            liczba_graczy.setTexture(lg2);
+        else if (players == 3)
+            liczba_graczy.setTexture(lg3);
+        window.draw(liczba_graczy);
         window.draw(z_tryb);
         window.draw(powrot);
         for (int i = 0; i < 4; i++)
@@ -656,15 +676,22 @@ void Plansza::przejscia_menu_plansza()
 
 
 
-void Plansza::obsluga_menu()
+void Plansza::obsluga_menu(ExitGames::LoadBalancing::Client& client)
 {
-    if (rozpocznij.getGlobalBounds().contains(mouse) && !wp_nazw)
+    if ((rozpocznij.getGlobalBounds().contains(mouse) && !wp_nazw) || host_started)
     {
         rozpocznij.setScale((float)window.getSize().y / pr.getSize().x * 0.55, (float)window.getSize().y / pr.getSize().x * 0.55);
-        if (event.type == sf::Event::MouseButtonPressed)
+        if (event.type == sf::Event::MouseButtonPressed || host_started)
         {
-            if (event.key.code == sf::Mouse::Left)
+            if ((event.key.code == sf::Mouse::Left && players == 3 && host) || host_started)
             {
+                Common::Hashtable eventContent;
+                eventContent.put("host_started", 1);
+                nByte eventCode = 1;
+                ExitGames::LoadBalancing::RaiseEventOptions options;
+
+                bool eventSent = client.opRaiseEvent(true, eventContent, eventCode, options);
+
                 rozpocznij.setScale((float)window.getSize().y / pr.getSize().x * 0.5, (float)window.getSize().y / pr.getSize().x * 0.5);
                 menu = 0;
                 przejscie1 = 1;
@@ -694,6 +721,19 @@ void Plansza::obsluga_menu()
                 kon_czasu = 0;
                 szachh.setString("SZACH!");
                 szachh.setPosition(window.getSize().x * 0.86, window.getSize().y * 0.3);
+
+                if (nr_trybu != 0)
+                    for (int j = 0; j < 3; j++)
+                    {
+                        czasy[j] = nr_trybu * 6000;
+                        tczasy[j].setString(std::to_string(nr_trybu * 10) + ":00,0");
+                    }
+                else
+                    for (int j = 0; j < 3; j++)
+                    {
+                        czasy[j] = 3000;
+                        tczasy[j].setString("05:00,0");
+                    }
             }
         }
     }
@@ -743,19 +783,19 @@ void Plansza::obsluga_menu()
                 {
                     nr_trybu = i;
                     z_tryb.setPosition(tryb[i].getPosition());
+                    
+                    if (host)
+                    {
+                        Common::Hashtable eventContent;
+                        eventContent.put("mode", i);
 
-                    if (i != 0)
-                        for (int j = 0; j < 3; j++)
-                        {
-                            czasy[j] = i * 6000;
-                            tczasy[j].setString(std::to_string(i*10) + ":00,0");
-                        }
-                    else
-                        for (int j = 0; j < 3; j++)
-                        {
-                            czasy[j] = 3000;
-                            tczasy[j].setString( "05:00,0");
-                        }
+                        nByte eventCode = 1;
+                        ExitGames::LoadBalancing::RaiseEventOptions options;
+
+                        bool eventSent = client.opRaiseEvent(true, eventContent, eventCode, options);
+                    }
+
+                  
                 }
             }
         }
@@ -932,7 +972,7 @@ void Plansza::przeniesienie_figury(ExitGames::LoadBalancing::Client& client)
                 {
 
                     k->set_polozenie(pola[i1][i2][i3]);
-                    std::cout << k->get_pole().get_czesc_planszy() << k->get_pole().get_x() << k->get_pole().get_y();
+                   
 
              
                     std::shared_ptr<Figura> zbita = nullptr;
@@ -1028,15 +1068,10 @@ void Plansza::przeniesienie_figury(ExitGames::LoadBalancing::Client& client)
 
                     if (client.getState() == PeerStates::Joined) {
                         int playerNr = client.getLocalPlayer().getNumber();
-
-                        //if (listener.currentTurn == playerNr) {
-                        int liczba;
-                        std::cout << "Twoja kolej! Podaj liczbê: ";
-                        //  std::cin >> liczba;
-                        //liczba = 2;
+                      
 
                         Common::Hashtable eventContent;
-                        //eventContent.put("liczba", liczba);
+                      
 
                         int nextTurn = (ruch + 1) % 3;
                         eventContent.put("turn", ruch);
@@ -1049,20 +1084,13 @@ void Plansza::przeniesienie_figury(ExitGames::LoadBalancing::Client& client)
 
                         nByte eventCode = 1;
                         ExitGames::LoadBalancing::RaiseEventOptions options;
-                        options.setReceiverGroup(Lite::ReceiverGroup::ALL);
+                      
                         bool eventSent = client.opRaiseEvent(true, eventContent, eventCode, options);
 
                         std::cout << "Zdarzenie wys³ane: " << (eventSent ? "sukces" : "b³¹d") << std::endl;
-
-                        //  listener.waitingForResponse = true;
-                          //while (listener.waitingForResponse) {
-                          //    std::this_thread::sleep_for(std::chrono::milliseconds(100)); // Ma³e opóŸnienie
-                          //}
-                     // }
                     }
 
                     text.setString(k->get_nazwa() + "        " + pol_s.get_pole_tab() + "    ->    " + pola[i1][i2][i3].get_pole_tab());
-
                     text.setOrigin(text.getGlobalBounds().width, 0);
                     if (k->get_kolor() == 0)
                         text.setFillColor(sf::Color::White);
@@ -1084,6 +1112,7 @@ void Plansza::przeniesienie_figury(ExitGames::LoadBalancing::Client& client)
        
     }
     poprawne_przeniesienie = 0;
+    k = nullptr;
 }
 
 
@@ -1107,11 +1136,8 @@ void pola_w_tablicy(Pole pola[3][8][4], int sx, int sy, int rozmiar)
 
 void Plansza::przeniesienie_figury_przeciwnika()
 {
-    std::cout<<std::endl<<pola[listener.receivedEventData["from_part"]][listener.receivedEventData["from_x"]][listener.receivedEventData["from_y"]].get_czesc_planszy();
-    std::cout << std::endl << pola[listener.receivedEventData["from_part"]][listener.receivedEventData["from_x"]][listener.receivedEventData["from_y"]].get_x();
-    std::cout << std::endl << pola[listener.receivedEventData["from_part"]][listener.receivedEventData["from_x"]][listener.receivedEventData["from_y"]].get_y();
-    for (auto j = fig.begin(); j != fig.end(); j++)
-        if ((*j)->get_pole() == pola[(listener.receivedEventData["to_part"])][(listener.receivedEventData["to_x"])][(listener.receivedEventData["to_y"])] && (*j)->get_kolor() != ruch)
+     for (auto j = fig.begin(); j != fig.end(); j++)
+        if ((*j)->get_pole() == pola[(listener.receivedEventData["to_part"])][(listener.receivedEventData["to_x"])][(listener.receivedEventData["to_y"])] /*&& (*j)->get_kolor() != k->get_kolor()*/)
         {
             fig.erase(j);
             break;
@@ -1119,8 +1145,7 @@ void Plansza::przeniesienie_figury_przeciwnika()
     for (auto i : fig)
     {
 
-        if (i->get_pole() == pola[(listener.receivedEventData["from_part"])][(listener.receivedEventData["from_x"])][(listener.receivedEventData["from_y"])]) {
-            std::cout << "kolor tego typu: " << i->get_kolor();
+        if (i->get_pole() == pola[(listener.receivedEventData["from_part"])][(listener.receivedEventData["from_x"])][(listener.receivedEventData["from_y"])] /*&& (*j) != k*/) {
              
 
             i->set_polozenie(pola[(listener.receivedEventData["to_part"])][(listener.receivedEventData["to_x"])][(listener.receivedEventData["to_y"])]);
@@ -1134,7 +1159,7 @@ void Plansza::przeniesienie_figury_przeciwnika()
             {
                 j->setPosition(j->getPosition().x, j->getPosition().y + w_size * 0.02);
             }
-            text.setString(i->get_nazwa() + "        " + pol_s.get_pole_tab() + "    ->    " + i->get_pole().get_pole_tab());
+            text.setString(i->get_nazwa() + "        " + pola[(listener.receivedEventData["from_part"])][(listener.receivedEventData["from_x"])][(listener.receivedEventData["from_y"])].get_pole_tab() + "    ->    " + pola[(listener.receivedEventData["to_part"])][(listener.receivedEventData["to_x"])][(listener.receivedEventData["to_y"])].get_pole_tab());
 
             text.setOrigin(text.getGlobalBounds().width, 0);
             if (i->get_kolor() == 0)
@@ -1145,22 +1170,22 @@ void Plansza::przeniesienie_figury_przeciwnika()
                 text.setFillColor(sf::Color::Red);
             zagrania.push_back(text);
 
-            //for (int i = 0; i < 3; i++)
-            //{
-            //    if (spr_szach(fig[i]) && i != ruch)
-            //    {
-            //        szach[i] = true;
-            //        if (spr_mat(fig[i]))
-            //        {
-            //            mat = 1;
-            //            szachh.setString("MAT!");
-            //            szachh.setPosition(window.getSize().x * 0.88, window.getSize().y * 0.3);
-            //            kolej_g.setString("Wygrywa:");
-            //        }
-            //    }
-            //    else
-            //        szach[i] = false;
-            //}
+            for (int i = 0; i < 3; i++)
+            {
+                if (spr_szach(fig[i]))
+                {
+                    szach[i] = true;
+                    if (spr_mat(fig[i]))
+                    {
+                        mat = 1;
+                        szachh.setString("MAT!");
+                        szachh.setPosition(window.getSize().x * 0.88, window.getSize().y * 0.3);
+                        kolej_g.setString("Wygrywa:");
+                    }
+                }
+                else
+                    szach[i] = false;
+            }
 
             if (!mat)
             {
@@ -1199,173 +1224,6 @@ void Plansza::przeniesienie_figury_przeciwnika()
                 }
             }
         }
-    }
-           
-        
-    
-    //wyswietlanie();
-    //is_move = 0;
-
-    //for (int i1 = 0; i1 < 3; i1++)
-    //{
-    //    for (int i2 = 0; i2 < 8; i2++)
-    //    {
-    //        for (int i3 = 0; i3 < 4; i3++)
-    //        {
-    //            if (k->get_sprite().getGlobalBounds().contains(pola[i1][i2][i3].get_wx(), pola[i1][i2][i3].get_wy()) && mozliwe_ruchy[i1][i2][i3] == 1)
-    //            {
-
-    //                k->set_polozenie(pola[i1][i2][i3]);
-    //                std::cout << k->get_pole().get_czesc_planszy() << k->get_pole().get_x() << k->get_pole().get_y();
-
-
-    //                std::shared_ptr<Figura> zbita = nullptr;
-    //                for (auto j = fig.begin(); j != fig.end(); j++)
-    //                    if ((*j)->get_pole() == pola[i1][i2][i3] && (*j) != k)
-    //                    {
-    //                        zbita = *j;
-    //                        fig.erase(j);
-    //                        break;
-    //                    }
-
-
-
-    //                if (spr_szach(fig[ruch]))
-    //                {
-    //                    if (zbita != nullptr)
-    //                    {
-    //                        fig.push_back(zbita);
-    //                        zbita = nullptr;
-    //                    }
-    //                    break;
-    //                }
-
-    //                for (int i = 0; i < 3; i++)
-    //                {
-    //                    if (spr_szach(fig[i]) && i != ruch)
-    //                    {
-    //                        szach[i] = true;
-    //                        if (spr_mat(fig[i]))
-    //                        {
-    //                            mat = 1;
-    //                            szachh.setString("MAT!");
-    //                            szachh.setPosition(window.getSize().x * 0.88, window.getSize().y * 0.3);
-    //                            kolej_g.setString("Wygrywa:");
-    //                        }
-    //                    }
-    //                    else
-    //                        szach[i] = false;
-    //                }
-
-    //                poprawne_przeniesienie = 1;
-    //                ruch += 1;
-    //                ruch = ruch % 3;
-    //                if (!mat)
-    //                {
-    //                    if (ruch == 1)
-    //                    {
-    //                        podswietlenie.setTexture(sw_c);
-    //                        kolej_gn.setString(nazwa_b.getString());
-    //                    }
-    //                    else if (ruch == 2)
-    //                    {
-    //                        podswietlenie.setTexture(sw);
-    //                        kolej_gn.setString(nazwa_r.getString());
-    //                    }
-    //                    else
-    //                    {
-    //                        podswietlenie.setTexture(sw_b);
-    //                        kolej_gn.setString(nazwa_w.getString());
-    //                    }
-    //                }
-    //                else
-    //                {
-    //                    if (ruch == 1)
-    //                    {
-    //                        podswietlenie.setTexture(sw_c);
-    //                        kolej_gn.setString(nazwa_w.getString());
-    //                    }
-    //                    else if (ruch == 2)
-    //                    {
-    //                        podswietlenie.setTexture(sw);
-    //                        kolej_gn.setString(nazwa_b.getString());
-    //                    }
-    //                    else
-    //                    {
-    //                        podswietlenie.setTexture(sw_b);
-    //                        kolej_gn.setString(nazwa_r.getString());
-    //                    }
-    //                }
-
-
-
-
-    //                if (zagrania.size() >= 10)
-    //                {
-    //                    zagrania.pop_front();
-
-    //                }
-    //                for (auto i4 = zagrania.begin(); i4 != zagrania.end(); i4++)
-    //                {
-    //                    i4->setPosition(i4->getPosition().x, i4->getPosition().y + w_size * 0.02);
-    //                }
-
-    //                if (client.getState() == PeerStates::Joined) {
-    //                    int playerNr = client.getLocalPlayer().getNumber();
-
-    //                    //if (listener.currentTurn == playerNr) {
-    //                    int liczba;
-    //                    std::cout << "Twoja kolej! Podaj liczbê: ";
-    //                    //  std::cin >> liczba;
-    //                    //liczba = 2;
-
-    //                    Common::Hashtable eventContent;
-    //                    //eventContent.put("liczba", liczba);
-
-    //                    int nextTurn = (playerNr % 3) + 1;
-    //                    eventContent.put("turn", ruch);
-    //                    eventContent.put("from_part", pol_s.get_czesc_planszy());
-    //                    eventContent.put("from_x", pol_s.get_x());
-    //                    eventContent.put("from_y", pol_s.get_y());
-    //                    eventContent.put("to_part", pola[i1][i2][i3].get_czesc_planszy());
-    //                    eventContent.put("to_x", pola[i1][i2][i3].get_x());
-    //                    eventContent.put("to_y", pola[i1][i2][i3].get_y());
-
-    //                    nByte eventCode = 1;
-    //                    ExitGames::LoadBalancing::RaiseEventOptions options;
-    //                    options.setReceiverGroup(Lite::ReceiverGroup::ALL);
-    //                    bool eventSent = client.opRaiseEvent(true, eventContent, eventCode, options);
-
-    //                    std::cout << "Zdarzenie wys³ane: " << (eventSent ? "sukces" : "b³¹d") << std::endl;
-
-    //                    //  listener.waitingForResponse = true;
-    //                      //while (listener.waitingForResponse) {
-    //                      //    std::this_thread::sleep_for(std::chrono::milliseconds(100)); // Ma³e opóŸnienie
-    //                      //}
-    //                 // }
-    //                }
-
-    //                text.setString(k->get_nazwa() + "        " + pol_s.get_pole_tab() + "    ->    " + pola[i1][i2][i3].get_pole_tab());
-
-    //                text.setOrigin(text.getGlobalBounds().width, 0);
-    //                if (k->get_kolor() == 0)
-    //                    text.setFillColor(sf::Color::White);
-    //                else if (k->get_kolor() == 1)
-    //                    text.setFillColor(sf::Color::Black);
-    //                else
-    //                    text.setFillColor(sf::Color::Red);
-    //                zagrania.push_back(text);
-    //            }
-
-    //        }
-
-
-    //    }
-
-    //}
-    //if (!poprawne_przeniesienie) {
-    //    k->set_polozenie(pol_s);
-
-    //}
-    //poprawne_przeniesienie = 0;
+    }     
+    k = nullptr;  
 }

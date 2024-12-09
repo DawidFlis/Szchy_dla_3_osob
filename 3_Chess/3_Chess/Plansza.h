@@ -28,18 +28,18 @@ class Plansza
 	sf::Sprite glosnik; 
 	sf::Sprite restart; 
 	sf::Sprite podswietlenie;
-	sf::Sprite bg;
+	sf::Sprite bg, liczba_graczy;
 	std::list<sf::Text> zagrania;
 	sf::Text text;
-	sf::Texture pr, pw, pp, tabela, g1, g2, res, sw, sw_c, sw_b;
+	sf::Texture pr, pw, pp, tabela, g1, g2, res, sw, sw_c, sw_b, lg1, lg2, lg3, oczekiwanie;
 	sf::Texture p[7];
-	int w_size;
+	int w_size, players;
 	Pole pola[3][8][4];
 	sf::Sprite plansza;
 	sf::RenderWindow window;
 	sf::Texture tlo;
 	sf::Font font;
-	bool mozliwe_ruchy[3][8][4];
+	bool mozliwe_ruchy[3][8][4], host;
 	sf::Texture zp, zp1;
 	sf::Sprite z_pole, z_pole1;
 	void ustawianie_figur();
@@ -49,9 +49,9 @@ class Plansza
 	std::shared_ptr<Figura> k;
 	void przejscia_menu_plansza();
 	int i = 0;
-	void obsluga_menu();
+	void obsluga_menu(ExitGames::LoadBalancing::Client&);
 	sf::Event event;
-	bool is_move = 0, poprawne_przeniesienie = 0;
+	bool is_move = 0, poprawne_przeniesienie = 0, online = 1;
 	Pole pol_s;
 	float dx, dy;
 	int ruch = 0;
@@ -74,7 +74,7 @@ class Plansza
 	sf::Sprite tryb[4], z_tryb;
 	int nr_trybu = 1;
 	bool spr_mat(std::shared_ptr<Figura>& krol);
-	bool mat = 0, kon_czasu=0;
+	bool mat = 0, kon_czasu=0, host_started = 0;
 	
 public:
 	void clientServiceLoop(Client& client);
