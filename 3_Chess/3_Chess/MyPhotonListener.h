@@ -13,6 +13,7 @@ using namespace std;
 class MyPhotonListener : public ExitGames::LoadBalancing::Listener {
 public:
     std::unordered_map<std::string, int> receivedEventData;
+    std::unordered_map<std::string, std::string> receivedEventDataStrings;
     int currentTurn = 1;
     bool waitingForResponse = true;
 
@@ -108,40 +109,50 @@ public:
 
         // Sprawdzanie kodu zdarzenia, np. 1 dla wiadomoœci tekstowej
         if (eventCode == 1) {
-            // Odczytanie wiadomoœci z obiektu eventContent
-            cout << eventContent.toString();
-            Common::JString message;
+            std::cout << "Odebrano niestandardowe zdarzenie od gracza " << playerNr << ", kod zdarzenia: " << eventCode << std::endl;
 
-            eventContent.toString(message);
+            if (eventCode == 1) { // Sprawdzenie kodu zdarzenia
+                // Odczytanie wiadomoœci z obiektu eventContent
+                std::cout << eventContent.toString();
+                Common::JString message;
 
+                eventContent.toString(message);
 
-            string input = message.UTF8Representation().cstr();
+                std::string input = message.UTF8Representation().cstr();
 
-            std::regex regex("\"([^\"]+)\"\\s*=\\s*(\\d+)");
+                // Regex do dopasowywania par klucz-wartoœæ (dla stringów i intów)
+                std::regex regexInt("\"([^\"]+)\"\\s*=\\s*(\\d+)");
+                std::regex regexString("\"([^\"]+)\"\\s*=\\s*\"([^\"]+)\"");
 
-            std::smatch matches;
+                // Dopasowania liczb ca³kowitych
+                auto beginInt = std::sregex_iterator(input.begin(), input.end(), regexInt);
+                auto endInt = std::sregex_iterator();
 
-            // Wyszukiwanie wszystkich dopasowañ
-            auto begin = std::sregex_iterator(input.begin(), input.end(), regex);
-            auto end = std::sregex_iterator();
+                for (auto it = beginInt; it != endInt; ++it) {
+                    std::smatch match = *it;
+                    std::string key = match[1].str();
+                    int value = std::stoi(match[2].str());
+                    receivedEventData[key] = value; // Przechowywanie int w mapie
+                    std::cout << "Klucz (int): " << key << ", Wartoœæ: " << value << std::endl;
+                }
 
-            // Iterowanie po wszystkich dopasowaniach
-            for (auto it = begin; it != end; ++it) {
-                std::smatch match = *it;
+                // Dopasowania tekstów
+                auto beginString = std::sregex_iterator(input.begin(), input.end(), regexString);
+                auto endString = std::sregex_iterator();
 
-                // match[1] - klucz, match[2] - wartoœæ
-                std::string key = match[1].str();
-                int value = std::stoi(match[2].str());
-                currentTurn = value;
-                receivedEventData[key] = value;
-                std::cout << "Klucz: " << key << ", Wartosc: " << value << std::endl;
+                for (auto it = beginString; it != endString; ++it) {
+                    std::smatch match = *it;
+                    std::string key = match[1].str();
+                    std::string value = match[2].str();
+                    receivedEventDataStrings[key] = value; // Przechowywanie string w osobnej mapie
+                    std::cout << "Klucz (string): " << key << ", Wartoœæ: " << value << std::endl;
+                }
+
+                // Wyœwietlanie pe³nej wiadomoœci na konsoli
+                std::cout << "Wiadomoœæ: " << message.UTF8Representation().cstr() << std::endl;
+
+                waitingForResponse = false;
             }
-
-
-            // Wyœwietlanie wiadomoœci na konsoli
-            cout << "Wiadomoœæ: " << message.UTF8Representation().cstr() << endl;
-
-            waitingForResponse = false;
         }
     }
 

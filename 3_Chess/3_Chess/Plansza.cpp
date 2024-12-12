@@ -65,13 +65,19 @@ void Plansza::glowna_petla()
     nazwa_r.setFont(font);
     nazwa_b.setFont(font);
     nazwa_w.setFont(font);
-    nazwa_r.setString(playerInput);
+    room.setFont(font);
+    nickname.setFont(font);
+    //nazwa_r.setString(playerInput);
     nazwa_r.setScale(w_size * 0.001, w_size * 0.001);
+    room.setScale(w_size * 0.001, w_size * 0.001);
+    nickname.setScale(w_size * 0.001, w_size * 0.001);
     nazwa_b.setScale(w_size * 0.001, w_size * 0.001);
     nazwa_w.setScale(w_size * 0.001, w_size * 0.001);
     nazwa_r.setPosition(w_size * 0.715, w_size * 0.44);
     nazwa_w.setPosition(w_size * 0.715, w_size * 0.303);
     nazwa_b.setPosition(w_size * 0.715, w_size * 0.37);
+    room.setPosition(w_size * 0.69, w_size / 3);
+    nickname.setPosition(w_size * 0.69, w_size / 2.11);
 
 
     const ExitGames::Common::JString appId = "3bf3141a-2fda-4b2f-add5-cb80b8d0bb1f";         
@@ -139,8 +145,9 @@ void Plansza::glowna_petla()
         }
 
 
-        if (client.getState() == PeerStates::JoinedLobby && !attemptedJoinOrCreate) {
-            Common::JString roomName = "MyRoom1";
+        if (client.getState() == PeerStates::JoinedLobby && !attemptedJoinOrCreate && roomname!="" && nick != "") {
+            Common::JString roomName = roomname.c_str();
+            std::cout << roomname;
             client.opJoinOrCreateRoom(roomName);
             attemptedJoinOrCreate = true;
         }
@@ -157,22 +164,45 @@ void Plansza::glowna_petla()
             host_started = listener.receivedEventData["host_started"];
         }
 
+      //  if (listener.receivedEventDataStrings["nickname"]) {
+            if (listener.receivedEventDataStrings.find("nick_white") != listener.receivedEventDataStrings.end()) {
+               
+                nazwa_w.setString(listener.receivedEventDataStrings["nick_white"]);
+                std::cout << std::endl << "nazwa_w " + nazwa_w.getString().toAnsiString();
+            }
+            if (listener.receivedEventDataStrings.find("nick_black") != listener.receivedEventDataStrings.end()) {
+                nazwa_b.setString(listener.receivedEventDataStrings["nick_black"]);
+                std::cout << std::endl << "nazwa_b " + nazwa_b.getString().toAnsiString();
+            }
+            if (listener.receivedEventDataStrings.find("nick_red") != listener.receivedEventDataStrings.end()){
+                nazwa_r.setString(listener.receivedEventDataStrings["nick_red"]);
+                std::cout << std::endl << "nazwa_r " + nazwa_r.getString().toAnsiString();
+            }
+       // }
+    
         players = client.getCurrentlyJoinedRoom().getPlayerCount();
-     
-
+        
         if (menu == 1)
             obsluga_menu(std::ref(client));
 
-        if (wp_nazw)
-            wprowadzanie_nazw();
+        /*if (wp_nazw)
+            wprowadzanie_nazw();*/
+       /* if (wp_nazw_pok)
+            wprowadzanie_nazwy_pokoju();*/
 
         while (window.pollEvent(event))
         {
+            if (wybor_rozgrywki)
+                wybieranie_rozgrywki();
+            if (wp_nazw)
+                wprowadzanie_nazw();
+            if (wp_nazw_pok)
+                wprowadzanie_nazwy_pokoju();
 
             if (event.type == sf::Event::Closed)
                 window.close();
         
-
+            std::cout<<client.getLocalPlayer().getNumber();
 
 
             if (event.type == sf::Event::MouseButtonPressed && playerNr == ruch)
@@ -208,6 +238,53 @@ void Plansza::glowna_petla()
 }
 
 
+void Plansza::wybieranie_rozgrywki()
+{
+    if (rozgrywka_online.getGlobalBounds().contains(mouse))
+    {
+        rozgrywka_online.setScale((float)window.getSize().y / r_online.getSize().x * 0.45, (float)window.getSize().y / r_online.getSize().x * 0.45);
+        if (event.type == sf::Event::MouseButtonPressed)
+        {
+            if (event.key.code == sf::Mouse::Left)
+            {
+                online = 1;
+                wybor_rozgrywki = 0;
+                wp_nazw_pok = 1;
+            }
+        }
+    }
+    else
+        rozgrywka_online.setScale((float)window.getSize().y / r_online.getSize().x * 0.4, (float)window.getSize().y / r_online.getSize().x * 0.4);
+
+    if (rozgrywka_lokalna.getGlobalBounds().contains(mouse))
+    {
+        rozgrywka_lokalna.setScale((float)window.getSize().y / r_lokalna.getSize().x * 0.45, (float)window.getSize().y / r_lokalna.getSize().x * 0.45);
+        if (event.type == sf::Event::MouseButtonPressed)
+        {
+            if (event.key.code == sf::Mouse::Left)
+            {
+                online = 0;
+                wybor_rozgrywki = 0;
+                wp_nazw = 1;
+            }
+        }
+    }
+    else
+        rozgrywka_lokalna.setScale((float)window.getSize().y / r_lokalna.getSize().x * 0.4, (float)window.getSize().y / r_lokalna.getSize().x * 0.4);
+
+    if (wyjdz.getGlobalBounds().contains((sf::Vector2f)sf::Mouse::getPosition(window)))
+    {
+        wyjdz.setScale((float)window.getSize().y / pr.getSize().x * 0.45, (float)window.getSize().y / pr.getSize().x * 0.45);
+        if (event.type == sf::Event::MouseButtonPressed)
+        {
+            if (event.key.code == sf::Mouse::Left)
+                window.close();
+        }
+    }
+    else
+        wyjdz.setScale((float)window.getSize().y / pr.getSize().x * 0.4, (float)window.getSize().y / pr.getSize().x * 0.4);
+
+}
 
 
 void Plansza::wprowadzanie_nazw()
@@ -215,11 +292,11 @@ void Plansza::wprowadzanie_nazw()
     
     std::regex reg("[A-Z]\\w{4,14}");
     std::regex reg1("[a-z]");
-  
+
     if (event.key.code == sf::Keyboard::BackSpace)
         playerInput = "";
 
-   
+
     if (event.type == sf::Event::KeyPressed)
     {
         if (event.key.code == sf::Keyboard::Enter)
@@ -229,17 +306,18 @@ void Plansza::wprowadzanie_nazw()
                 aktualna_nazwa++;
             playerInput = "";
         }
-       
+
 
     }
 
-    
+
     if (event.type == sf::Event::TextEntered)
     {
 
         playerInput += event.text.unicode;
+        
 
-       
+        std::cout << aktualna_nazwa;
 
         if (aktualna_nazwa == 0)
             nazwa_w.setString(playerInput);
@@ -255,19 +333,139 @@ void Plansza::wprowadzanie_nazw()
     {
         playerInput = "";
     }
+
     kolej_gn.setString(nazwa_w.getString());
 
+    if (powrot.getGlobalBounds().contains((sf::Vector2f)sf::Mouse::getPosition(window)))
+    {
+        powrot.setScale(window.getSize().y * 0.00023, window.getSize().y * 0.00021);
+        if (event.type == sf::Event::MouseButtonPressed)
+        {
+            if (event.key.code == sf::Mouse::Left)
+            {
+                powrot.setScale(window.getSize().y * 0.00018, window.getSize().y * 0.00017);
+
+                wp_nazw = 0;
+                wybor_rozgrywki = 1;
+                nazwa_b.setString("");
+                nazwa_w.setString("");
+                nazwa_r.setString("");
+                aktualna_nazwa = 0;
+            }
+        }
+    }
+    else
+        powrot.setScale(window.getSize().y * 0.00018, window.getSize().y * 0.00017);
+
+    if (wyjdz.getGlobalBounds().contains((sf::Vector2f)sf::Mouse::getPosition(window)))
+    {
+        wyjdz.setScale((float)window.getSize().y / pr.getSize().x * 0.45, (float)window.getSize().y / pr.getSize().x * 0.45);
+        if (event.type == sf::Event::MouseButtonPressed)
+        {
+            if (event.key.code == sf::Mouse::Left)
+                window.close();
+        }
+    }
+    else
+        wyjdz.setScale((float)window.getSize().y / pr.getSize().x * 0.4, (float)window.getSize().y / pr.getSize().x * 0.4);
 
 
-    nazwa_w.setString("Gracz1");
+    /*nazwa_w.setString("Gracz1");
     
     nazwa_b.setString("Gracz2");
     
     nazwa_r.setString("Gracz3");
     
-    wp_nazw = 0;
+    wp_nazw = 0;*/
    
     
+}
+
+void Plansza::wprowadzanie_nazwy_pokoju()
+{
+
+    std::regex reg("[A-Z]\\w{4,14}");
+    std::regex reg1("[a-z]");
+
+    if (event.key.code == sf::Keyboard::BackSpace)
+        playerInput = "";
+
+
+    if (event.type == sf::Event::KeyPressed)
+    {
+        if (event.key.code == sf::Keyboard::Enter)
+        {
+            std::cout << playerInput << std::endl;
+            
+            if (aktualna_nazwa == 0) {
+                roomname = playerInput;
+            }
+            else if (aktualna_nazwa == 1 && std::regex_match(playerInput, reg)) {
+                nick = playerInput;
+                menu = 1;
+            }
+            if (std::regex_match(playerInput, reg))
+                aktualna_nazwa++;
+            playerInput = "";
+        }
+    }
+    if (powrot.getGlobalBounds().contains((sf::Vector2f)sf::Mouse::getPosition(window)))
+    {
+        powrot.setScale(window.getSize().y * 0.00023, window.getSize().y * 0.00021);
+        if (event.type == sf::Event::MouseButtonPressed)
+        {
+            if (event.key.code == sf::Mouse::Left)
+            {
+                powrot.setScale(window.getSize().y * 0.00018, window.getSize().y * 0.00017);
+
+                wp_nazw_pok = 0;
+                wybor_rozgrywki = 1;
+                nazwa_b.setString("");
+                nazwa_w.setString("");
+                nazwa_r.setString("");
+                aktualna_nazwa = 0;
+            }
+        }
+    }
+    else
+        powrot.setScale(window.getSize().y * 0.00018, window.getSize().y * 0.00017);
+
+    if (wyjdz.getGlobalBounds().contains((sf::Vector2f)sf::Mouse::getPosition(window)))
+    {
+        wyjdz.setScale((float)window.getSize().y / pr.getSize().x * 0.45, (float)window.getSize().y / pr.getSize().x * 0.45);
+        if (event.type == sf::Event::MouseButtonPressed)
+        {
+            if (event.key.code == sf::Mouse::Left)
+                window.close();
+        }
+    }
+    else
+        wyjdz.setScale((float)window.getSize().y / pr.getSize().x * 0.4, (float)window.getSize().y / pr.getSize().x * 0.4);
+
+
+    if (event.type == sf::Event::TextEntered)
+    {
+
+        playerInput += event.text.unicode;
+
+
+
+        if (aktualna_nazwa == 0) {
+            room.setString(playerInput);
+        }
+        else if (aktualna_nazwa == 1)
+            nickname.setString(playerInput);
+        else
+            wp_nazw_pok = 0;
+    }
+
+    if (event.key.code == sf::Keyboard::Enter)
+    {
+        playerInput = "";
+    }
+    //kolej_gn.setString(nazwa_w.getString());
+
+
 }
 
 
@@ -372,6 +570,10 @@ void Plansza::wczytanie_tekstur()
     lg1.loadFromFile("images/graczywpok1.png");
     lg2.loadFromFile("images/graczywpok2.png");
     lg3.loadFromFile("images/graczywpok3.png");
+    tnp.loadFromFile("images/nazwa_pok.png");
+    tnn.loadFromFile("images/nickname.png");
+    r_lokalna.loadFromFile("images/lokalna.png");
+    r_online.loadFromFile("images/online.png");
 
     rozpocznij.setTexture(pr);
     wyjdz.setTexture(pw);
@@ -381,6 +583,8 @@ void Plansza::wczytanie_tekstur()
     restart.setTexture(res);
     podswietlenie.setTexture(sw_b);
     liczba_graczy.setTexture(lg1);
+    rozgrywka_lokalna.setTexture(r_lokalna);
+    rozgrywka_online.setTexture(r_online);
 
     z_pole.setTexture(zp);
     z_pole.setOrigin(zp.getSize().x / 2, zp.getSize().y / 2);
@@ -423,6 +627,10 @@ void Plansza::wczytanie_tekstur()
     plansza.setOrigin(p[0].getSize().x / 2, p[0].getSize().y / 2);
     rozpocznij.setOrigin(pr.getSize().x / 2, pr.getSize().y / 2);
     rozpocznij.setScale((float)window.getSize().y / pr.getSize().x * 0.5, (float)window.getSize().y / pr.getSize().x * 0.5);
+    rozgrywka_lokalna.setOrigin(pr.getSize().x / 2, pr.getSize().y / 2);
+    rozgrywka_lokalna.setScale((float)window.getSize().y / pr.getSize().x * 0.4, (float)window.getSize().y / pr.getSize().x * 0.4);
+    rozgrywka_online.setOrigin(pr.getSize().x / 2, pr.getSize().y / 2);
+    rozgrywka_online.setScale((float)window.getSize().y / pr.getSize().x * 0.4, (float)window.getSize().y / pr.getSize().x * 0.4);
     wyjdz.setOrigin(sf::Vector2f(pr.getSize().x / 2, pr.getSize().y / 2));
     wyjdz.setScale((float)window.getSize().y / pr.getSize().x * 0.4, (float)window.getSize().y / pr.getSize().x * 0.4);
 
@@ -432,6 +640,8 @@ void Plansza::wczytanie_tekstur()
 
     plansza.setPosition(window.getSize().x / 2, window.getSize().y / 2);
     rozpocznij.setPosition(window.getSize().x / 2, window.getSize().y / 2.15);
+    rozgrywka_online.setPosition(window.getSize().x / 2, window.getSize().y / 2);
+    rozgrywka_lokalna.setPosition(window.getSize().x / 2, window.getSize().y / 3);
     wyjdz.setPosition(window.getSize().x / 2, window.getSize().y / 1.5);
     liczba_graczy.setPosition(window.getSize().x / 2, window.getSize().y / 1.3);
 
@@ -443,6 +653,16 @@ void Plansza::wczytanie_tekstur()
     nazwy.setOrigin(pr.getSize().x / 2, pr.getSize().y / 2);
     nazwy.setScale((float)window.getSize().y / pr.getSize().x * 0.5, (float)window.getSize().y / pr.getSize().x * 0.5);
     nazwy.setPosition(window.getSize().x / 2, window.getSize().y / 3.3);
+
+    tlo_nazwa_pokoju.setTexture(tnp);
+    tlo_nazwa_pokoju.setOrigin(pr.getSize().x / 2, pr.getSize().y / 2);
+    tlo_nazwa_pokoju.setScale((float)window.getSize().y / pr.getSize().x * 0.45, (float)window.getSize().y / pr.getSize().x * 0.45);
+    tlo_nazwa_pokoju.setPosition(window.getSize().x / 2, window.getSize().y / 2.6);
+
+    tlo_nickname.setTexture(tnn);
+    tlo_nickname.setOrigin(pr.getSize().x / 2, pr.getSize().y / 2);
+    tlo_nickname.setScale((float)window.getSize().y / pr.getSize().x * 0.45, (float)window.getSize().y / pr.getSize().x * 0.45);
+    tlo_nickname.setPosition(window.getSize().x / 2, window.getSize().y / 1.9);
 
     for (auto i = 0; i < 3; i++)
     {
@@ -502,19 +722,33 @@ void Plansza::wyswietlanie()
     window.draw(podswietlenie);
     window.draw(plansza);
 
+    if (wybor_rozgrywki)
+    {
+        window.draw(rozgrywka_lokalna);
+        window.draw(rozgrywka_online);
+    }
     if (wp_nazw)
     {
         window.draw(nazwy);
         window.draw(nazwa_r);
         window.draw(nazwa_b);
         window.draw(nazwa_w);
+        window.draw(powrot);
+    }
+    if (wp_nazw_pok)
+    {
+        window.draw(tlo_nazwa_pokoju);
+        window.draw(tlo_nickname);
+        window.draw(room);
+        window.draw(nickname);
+        window.draw(powrot);
     }
     if (usun_p2 == 0  )
     {
         window.draw(wyjdz);
     }
 
-    if (usun_p1 == 0 &&  !wp_nazw)
+    if (usun_p1 == 0 &&  !wp_nazw && !wp_nazw_pok && !wybor_rozgrywki)
     {
         if (!host)
             rozpocznij.setTexture(oczekiwanie);
@@ -524,7 +758,7 @@ void Plansza::wyswietlanie()
        
     }
 
-    if (menu && !wp_nazw)
+    if (menu && !wp_nazw && !wp_nazw_pok)
     {
         if (players == 1)
             liczba_graczy.setTexture(lg1);
@@ -689,6 +923,25 @@ void Plansza::obsluga_menu(ExitGames::LoadBalancing::Client& client)
                 eventContent.put("host_started", 1);
                 nByte eventCode = 1;
                 ExitGames::LoadBalancing::RaiseEventOptions options;
+
+              //  bool eventSent = client.opRaiseEvent(true, eventContent, eventCode, options);
+                
+               // Common::Hashtable eventContentS;
+               // ExitGames::Common::JString ni = nick.c_str() ;
+               // eventContent.put("nickname", nick.c_str());
+               // bool eventSents = client.opRaiseEvent(true, eventContentS, eventCode, options);
+                if (client.getLocalPlayer().getNumber() == 1) {
+                    nazwa_w.setString(nickname.getString());
+                    eventContent.put("nick_white", nick.c_str());
+                }
+                if (client.getLocalPlayer().getNumber() == 2) {
+                    nazwa_b.setString(nickname.getString());
+                    eventContent.put("nick_black", nick.c_str());
+                }
+                if (client.getLocalPlayer().getNumber() == 3) {
+                    nazwa_r.setString(nickname.getString());
+                    eventContent.put("nick_red", nick.c_str());
+                }
 
                 bool eventSent = client.opRaiseEvent(true, eventContent, eventCode, options);
 
@@ -1072,7 +1325,6 @@ void Plansza::przeniesienie_figury(ExitGames::LoadBalancing::Client& client)
 
                         Common::Hashtable eventContent;
                       
-
                         int nextTurn = (ruch + 1) % 3;
                         eventContent.put("turn", ruch);
                         eventContent.put("from_part", pol_s.get_czesc_planszy());

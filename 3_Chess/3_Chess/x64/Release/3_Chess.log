@@ -1,341 +1,456 @@
-﻿  Plansza.cpp
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Pionek.h(5,24): warning C4584: „Pionek”: klasa bazowa „sf::Drawable” jest już klasą bazową „Figura”
-  (kompilowanie pliku źródłowego „Plansza.cpp”)
-  C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45,7):
-  zobacz deklarację „sf::Drawable”
-  C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Figura.h(5,7):
-  zobacz deklarację „Figura”
-  
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Wieza.h(5,23): warning C4584: „Wieza”: klasa bazowa „sf::Drawable” jest już klasą bazową „Figura”
-  (kompilowanie pliku źródłowego „Plansza.cpp”)
-  C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45,7):
-  zobacz deklarację „sf::Drawable”
-  C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Figura.h(5,7):
-  zobacz deklarację „Figura”
-  
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Goniec.h(5,24): warning C4584: „Goniec”: klasa bazowa „sf::Drawable” jest już klasą bazową „Figura”
-  (kompilowanie pliku źródłowego „Plansza.cpp”)
-  C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45,7):
-  zobacz deklarację „sf::Drawable”
-  C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Figura.h(5,7):
-  zobacz deklarację „Figura”
-  
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Skoczek.h(5,25): warning C4584: „Skoczek”: klasa bazowa „sf::Drawable” jest już klasą bazową „Figura”
-  (kompilowanie pliku źródłowego „Plansza.cpp”)
-  C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45,7):
-  zobacz deklarację „sf::Drawable”
-  C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Figura.h(5,7):
-  zobacz deklarację „Figura”
-  
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Krol.h(5,22): warning C4584: „Krol”: klasa bazowa „sf::Drawable” jest już klasą bazową „Figura”
-  (kompilowanie pliku źródłowego „Plansza.cpp”)
-  C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45,7):
-  zobacz deklarację „sf::Drawable”
-  C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Figura.h(5,7):
-  zobacz deklarację „Figura”
-  
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Hetman.h(5,24): warning C4584: „Hetman”: klasa bazowa „sf::Drawable” jest już klasą bazową „Figura”
-  (kompilowanie pliku źródłowego „Plansza.cpp”)
-  C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45,7):
-  zobacz deklarację „sf::Drawable”
-  C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Figura.h(5,7):
-  zobacz deklarację „Figura”
-  
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(69,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(69,29): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(70,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(70,29): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(71,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(71,29): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(72,48): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(72,32): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(73,48): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(73,32): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(74,48): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(74,32): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(386,57): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(386,57): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(386,57): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(386,57): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(386,57): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(386,37): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(386,37): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(386,37): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(386,37): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(386,37): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(387,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(387,28): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(389,58): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(389,58): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(389,58): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(389,58): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(389,58): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(389,38): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(389,38): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(389,38): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(389,38): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(389,38): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(390,46): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(390,29): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(394,66): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(394,37): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(395,35): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(395,35): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(395,35): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(395,35): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(395,35): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(396,67): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(396,40): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(398,71): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(398,41): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(399,71): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(399,44): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(400,60): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(400,38): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(402,71): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(402,41): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(403,71): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(403,44): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(404,62): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(404,39): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(406,70): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(406,40): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(407,70): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(407,43): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(408,59): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(408,37): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(410,64): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(410,64): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(410,64): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(410,64): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(410,64): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(410,44): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(410,44): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(410,44): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(410,44): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(410,44): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(411,76): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(411,50): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(412,76): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(412,47): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(418,43): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(418,26): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(419,69): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(419,41): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(423,62): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(423,62): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(423,62): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(423,62): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(423,62): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(423,40): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(423,40): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(423,40): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(423,40): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(423,40): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(424,61): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(424,61): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(424,61): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(424,61): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(424,61): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(424,41): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(424,41): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(424,41): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(424,41): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(424,41): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(425,118): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(425,68): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(426,69): warning C4244: "argument": konwersja z "T" do "T", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(426,69): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(426,69): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(426,69): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(426,69): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(426,69): warning C4244:         and
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(426,69): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(426,69): warning C4244:             T=float
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(426,69): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(426,49): warning C4244: "argument": konwersja z "T" do "T", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(426,49): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(426,49): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(426,49): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(426,49): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(426,49): warning C4244:         and
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(426,49): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(426,49): warning C4244:             T=float
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(426,49): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(427,113): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(427,63): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(429,77): warning C4244: "argument": konwersja z "T" do "T", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(429,77): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(429,77): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(429,77): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(429,77): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(429,77): warning C4244:         and
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(429,77): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(429,77): warning C4244:             T=float
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(429,77): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(429,57): warning C4244: "argument": konwersja z "T" do "T", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(429,57): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(429,57): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(429,57): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(429,57): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(429,57): warning C4244:         and
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(429,57): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(429,57): warning C4244:             T=float
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(429,57): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(430,121): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(430,71): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(433,68): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(433,68): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(433,68): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(433,68): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(433,68): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(433,44): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(433,44): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(433,44): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(433,44): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(433,44): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(434,71): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(434,47): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(434,47): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(434,47): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(434,47): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(434,47): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(435,66): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(435,42): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(435,42): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(435,42): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(435,42): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(435,42): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(436,74): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(436,50): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(436,50): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(436,50): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(436,50): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(436,50): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(439,81): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(439,24): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(443,56): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(443,56): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(443,56): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(443,56): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(443,56): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(443,36): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(443,36): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(443,36): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(443,36): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(443,36): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(444,113): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(444,63): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(445,66): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(445,42): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(445,42): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(445,42): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(445,42): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(445,42): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(450,65): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(450,50): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(451,52): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(451,35): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(458,60): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(458,44): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(459,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(459,29): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(463,61): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(463,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(464,47): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(464,30): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(475,76): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(475,48): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(476,68): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(476,68): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(476,68): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(476,68): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(476,68): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(476,45): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(476,45): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(476,45): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(476,45): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(476,45): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(477,46): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(477,32): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(480,58): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(480,43): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(481,63): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(481,63): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(481,63): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(481,63): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(481,63): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(481,40): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(481,40): warning C4244:         with
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(481,40): warning C4244:         [
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(481,40): warning C4244:             T=unsigned int
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(481,40): warning C4244:         ]
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(482,46): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(482,28): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(486,70): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(486,43): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(487,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(487,28): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(610,76): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(610,47): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(631,88): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(631,57): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(633,73): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(633,47): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(644,76): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(644,47): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(666,89): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(666,57): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(668,74): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(668,47): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(683,123): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(683,72): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(695,130): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(695,80): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(723,82): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(723,55): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(741,122): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(741,72): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(745,118): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(745,67): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(753,117): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(753,67): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(757,74): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(757,44): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(762,82): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(762,52): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(773,74): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(773,44): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(779,55): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(779,37): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(803,54): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(803,37): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(814,74): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(814,44): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(819,82): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(819,52): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(827,74): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(827,44): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(831,75): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(831,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(858,78): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(858,51): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(862,75): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(862,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(866,75): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(866,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(869,75): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(869,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1008,98): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1008,71): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1066,82): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1128,61): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1160,71): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1182,90): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1182,63): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+﻿  3_Chess.cpp
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Pionek.h(5,24): warning C4584: „Pionek”: klasa bazowa „sf::Drawable” jest już klasą bazową „Figura”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45,7): message : zobacz deklarację „sf::Drawable”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Figura.h(5,7): message : zobacz deklarację „Figura”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Wieza.h(5,23): warning C4584: „Wieza”: klasa bazowa „sf::Drawable” jest już klasą bazową „Figura”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45,7): message : zobacz deklarację „sf::Drawable”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Figura.h(5,7): message : zobacz deklarację „Figura”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Goniec.h(5,24): warning C4584: „Goniec”: klasa bazowa „sf::Drawable” jest już klasą bazową „Figura”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45,7): message : zobacz deklarację „sf::Drawable”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Figura.h(5,7): message : zobacz deklarację „Figura”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Skoczek.h(5,25): warning C4584: „Skoczek”: klasa bazowa „sf::Drawable” jest już klasą bazową „Figura”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45,7): message : zobacz deklarację „sf::Drawable”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Figura.h(5,7): message : zobacz deklarację „Figura”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Krol.h(5,22): warning C4584: „Krol”: klasa bazowa „sf::Drawable” jest już klasą bazową „Figura”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45,7): message : zobacz deklarację „sf::Drawable”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Figura.h(5,7): message : zobacz deklarację „Figura”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Hetman.h(5,24): warning C4584: „Hetman”: klasa bazowa „sf::Drawable” jest już klasą bazową „Figura”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45,7): message : zobacz deklarację „sf::Drawable”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Figura.h(5,7): message : zobacz deklarację „Figura”
+  Plansza.cpp
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Pionek.h(5,24): warning C4584: „Pionek”: klasa bazowa „sf::Drawable” jest już klasą bazową „Figura”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45,7): message : zobacz deklarację „sf::Drawable”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Figura.h(5,7): message : zobacz deklarację „Figura”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Wieza.h(5,23): warning C4584: „Wieza”: klasa bazowa „sf::Drawable” jest już klasą bazową „Figura”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45,7): message : zobacz deklarację „sf::Drawable”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Figura.h(5,7): message : zobacz deklarację „Figura”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Goniec.h(5,24): warning C4584: „Goniec”: klasa bazowa „sf::Drawable” jest już klasą bazową „Figura”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45,7): message : zobacz deklarację „sf::Drawable”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Figura.h(5,7): message : zobacz deklarację „Figura”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Skoczek.h(5,25): warning C4584: „Skoczek”: klasa bazowa „sf::Drawable” jest już klasą bazową „Figura”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45,7): message : zobacz deklarację „sf::Drawable”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Figura.h(5,7): message : zobacz deklarację „Figura”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Krol.h(5,22): warning C4584: „Krol”: klasa bazowa „sf::Drawable” jest już klasą bazową „Figura”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45,7): message : zobacz deklarację „sf::Drawable”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Figura.h(5,7): message : zobacz deklarację „Figura”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Hetman.h(5,24): warning C4584: „Hetman”: klasa bazowa „sf::Drawable” jest już klasą bazową „Figura”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45,7): message : zobacz deklarację „sf::Drawable”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Figura.h(5,7): message : zobacz deklarację „Figura”
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(71,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(71,29): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(72,42): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(72,26): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(73,46): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(73,30): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(74,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(74,29): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(75,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(75,29): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(76,48): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(76,32): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(77,48): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(77,32): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(78,48): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(78,32): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(79,44): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(79,29): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(80,48): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(80,33): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(245,141): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(245,84): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(257,140): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(257,84): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(261,144): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(261,86): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(273,143): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(273,86): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(277,118): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(277,67): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(285,117): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(285,67): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(341,74): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(341,44): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(346,82): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(346,52): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(358,74): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(358,44): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(362,118): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(362,67): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(370,117): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(370,67): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(414,74): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(414,44): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(419,82): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(419,52): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(431,74): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(431,44): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(435,118): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(435,67): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(443,117): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(443,67): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(590,57): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(590,37): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(591,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(591,28): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(593,58): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(593,38): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(594,46): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(594,29): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(598,66): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(598,37): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(599,35): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(600,67): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(600,40): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(602,71): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(602,41): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(603,71): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(603,44): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(604,60): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(604,38): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(606,71): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(606,41): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(607,71): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(607,44): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(608,62): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(608,39): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(610,70): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(610,40): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(611,70): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(611,43): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(612,59): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(612,37): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(614,64): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(614,44): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(615,76): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(615,50): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(616,76): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(616,47): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(622,43): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(622,26): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(623,69): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(623,41): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(627,62): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(627,40): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(628,61): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(628,41): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(629,118): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(629,68): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(630,68): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(630,48): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(631,125): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(631,75): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(632,67): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(632,47): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(633,124): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(633,74): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(634,69): warning C4244: "argument": konwersja z "T" do "T", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(634,49): warning C4244: "argument": konwersja z "T" do "T", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(635,113): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(635,63): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(637,77): warning C4244: "argument": konwersja z "T" do "T", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(637,57): warning C4244: "argument": konwersja z "T" do "T", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(638,121): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(638,71): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(641,68): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(641,44): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(642,71): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(642,47): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(643,77): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(643,53): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(644,78): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(644,54): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(645,66): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(645,42): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(646,74): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(646,50): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(649,81): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(649,24): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(653,56): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(653,36): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(654,113): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(654,63): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(655,66): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(655,42): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(658,67): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(658,47): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(659,125): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(659,74): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(660,77): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(660,53): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(663,63): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(663,43): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(664,121): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(664,70): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(665,73): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(665,49): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(670,65): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(670,50): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(671,52): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(671,35): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(678,60): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(678,44): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(679,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(679,29): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(683,61): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(683,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(684,47): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(684,30): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(695,76): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(695,48): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(696,68): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(696,45): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(697,46): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(697,32): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(700,58): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(700,43): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(701,63): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(701,40): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(702,46): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(702,28): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(706,70): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(706,43): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(707,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(707,28): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(844,76): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(844,47): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(865,88): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(865,57): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(867,73): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(867,47): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(878,76): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(878,47): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(900,89): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(900,57): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(902,74): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(902,47): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(917,123): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(917,72): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(948,130): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(948,80): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(976,82): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(976,55): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(994,122): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(994,72): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(998,118): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(998,67): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1006,117): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1006,67): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1010,74): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1010,44): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1015,82): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1015,52): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1026,74): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1026,44): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1032,55): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1032,37): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1056,54): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1056,37): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1067,74): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1067,44): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1072,82): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1072,52): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1080,74): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1080,44): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1084,75): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1084,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1111,78): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1111,51): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1115,75): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1115,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1119,75): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1119,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1122,75): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1122,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1261,98): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1261,71): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1319,82): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1380,61): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1412,71): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1434,90): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Plansza.cpp(1434,63): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
   Trwa generowanie kodu
-  169 of 1886 functions ( 9.0%) were compiled, the rest were copied from previous compilation.
+  4 of 2029 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    104 functions had inline decision re-evaluated but remain unchanged
+    3 functions had inline decision re-evaluated but remain unchanged
   Zakończono generowanie kodu
-  3_Chess.vcxproj -> C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\x64\Release\3_Chess.exe
+  3_Chess.vcxproj -> D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\x64\Release\3_Chess.exe

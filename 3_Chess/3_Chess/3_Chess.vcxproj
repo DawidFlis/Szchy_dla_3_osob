@@ -84,7 +84,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\lib;D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Common-cpp\lib;D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\LoadBalancing-cpp\lib;D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Photon-cpp\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -143,14 +143,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include;C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Photon-cpp\inc;C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Common-cpp\inc;C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\LoadBalancing-cpp\inc</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\include;D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\LoadBalancing-cpp\inc;D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Common-cpp\inc;D:\Dokumenty\Praca_inżynierska\Szachy_dla_3_osob\3_Chess\3_Chess\Photon-cpp\inc</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;Common-cpp_vc17_release_windows_md_x64.lib;Common-cpp_vc17_release_windows_md_x64.lib;Photon-cpp_vc17_release_windows_md_x64.lib;LoadBalancing-cpp_vc17_release_windows_md_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;Common-cpp_vc17_release_windows_md_x64.lib;Photon-cpp_vc17_release_windows_md_x64.lib;LoadBalancing-cpp_vc17_release_windows_md_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\SFML-2.5.1\lib;C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Photon-cpp\lib;C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\Common-cpp\lib;C:\Users\dawid\OneDrive\Pulpit\Praca_inż\Szachy_dla_3_osob\3_Chess\3_Chess\LoadBalancing-cpp\lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>

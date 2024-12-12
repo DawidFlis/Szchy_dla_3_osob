@@ -28,10 +28,10 @@ class Plansza
 	sf::Sprite glosnik; 
 	sf::Sprite restart; 
 	sf::Sprite podswietlenie;
-	sf::Sprite bg, liczba_graczy;
+	sf::Sprite bg, liczba_graczy, tlo_nazwa_pokoju, tlo_nickname, rozgrywka_online, rozgrywka_lokalna;
 	std::list<sf::Text> zagrania;
 	sf::Text text;
-	sf::Texture pr, pw, pp, tabela, g1, g2, res, sw, sw_c, sw_b, lg1, lg2, lg3, oczekiwanie;
+	sf::Texture pr, pw, pp, tabela, g1, g2, res, sw, sw_c, sw_b, lg1, lg2, lg3, oczekiwanie, tnp, tnn, r_online, r_lokalna;
 	sf::Texture p[7];
 	int w_size, players;
 	Pole pola[3][8][4];
@@ -45,13 +45,13 @@ class Plansza
 	void ustawianie_figur();
 	void wczytanie_tekstur();
 	void wyswietlanie();
-	bool usun_p1 = 0, usun_p2 = 0, menu = 1, cala_plansza = 0, przejscie1 = 0, przejscie2 = 0, szach[3] = { 0, 0, 0 };
+	bool usun_p1 = 0, usun_p2 = 0, menu = 0, wybor_rozgrywki = 1, cala_plansza = 0, przejscie1 = 0, przejscie2 = 0, szach[3] = { 0, 0, 0 };
 	std::shared_ptr<Figura> k;
 	void przejscia_menu_plansza();
 	int i = 0;
 	void obsluga_menu(ExitGames::LoadBalancing::Client&);
 	sf::Event event;
-	bool is_move = 0, poprawne_przeniesienie = 0, online = 1;
+	bool is_move = 0, poprawne_przeniesienie = 0, online = 0;
 	Pole pol_s;
 	float dx, dy;
 	int ruch = 0;
@@ -60,11 +60,12 @@ class Plansza
 	void przeniesienie_figury(ExitGames::LoadBalancing::Client&);
 	void przeniesienie_figury_przeciwnika();
 	bool spr_szach(std::shared_ptr<Figura>&);
-	bool wp_nazw = 1;
-	std::string playerInput;
-	sf::Text nazwa_b, nazwa_r, nazwa_w;
+	bool wp_nazw = 0, wp_nazw_pok = 0;
+	std::string playerInput, roomname="", nick;
+	sf::Text nazwa_b, nazwa_r, nazwa_w, room, nickname;
 	sf::Text tczasy[3];
 	void wprowadzanie_nazw();
+	void wprowadzanie_nazwy_pokoju();
 	sf::Texture n;
 	sf::Sprite nazwy;
 	int aktualna_nazwa=0;
@@ -79,5 +80,6 @@ class Plansza
 public:
 	void clientServiceLoop(Client& client);
 	void glowna_petla();
+	void wybieranie_rozgrywki();
 };
 
