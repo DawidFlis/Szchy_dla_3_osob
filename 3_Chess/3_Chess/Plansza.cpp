@@ -25,25 +25,28 @@ void Plansza::clientServiceLoop(Client& client) {
     while (running) {
         client.service();
         
-        if (host && menu && players!=prev_players)
+        if (online)
         {
-            Common::Hashtable eventContent;
-            eventContent.put("mode", nr_trybu);
-            nByte eventCode = 1;
-            ExitGames::LoadBalancing::RaiseEventOptions options;
-            bool eventSent = client.opRaiseEvent(true, eventContent, eventCode, options);
-            prev_players = players;
-        }
-    
-       
-       
-     
-        std::this_thread::sleep_for(std::chrono::milliseconds(10));
-        if (!listener.receivedEventData.empty()) {
-            if (listener.receivedEventData["turn"] != previous_turn) {
-                previous_turn = listener.receivedEventData["turn"];
-                ruch = previous_turn;
-                przeniesienie_figury_przeciwnika();
+            if (host && menu && players != prev_players)
+            {
+                Common::Hashtable eventContent;
+                eventContent.put("mode", nr_trybu);
+                nByte eventCode = 1;
+                ExitGames::LoadBalancing::RaiseEventOptions options;
+                bool eventSent = client.opRaiseEvent(true, eventContent, eventCode, options);
+                prev_players = players;
+            }
+
+
+
+
+            std::this_thread::sleep_for(std::chrono::milliseconds(10));
+            if (!listener.receivedEventData.empty()) {
+                if (listener.receivedEventData["turn"] != previous_turn) {
+                    previous_turn = listener.receivedEventData["turn"];
+                    ruch = previous_turn;
+                    przeniesienie_figury_przeciwnika();
+                }
             }
         }
        
@@ -54,7 +57,7 @@ void Plansza::clientServiceLoop(Client& client) {
 
 void Plansza::glowna_petla()
 {
-    window.create(sf::VideoMode(1600, 900), "Szachy dla 3 osób"/*, sf::Style::Fullscreen*/);
+    window.create(sf::VideoMode(16000, 9000), "Szachy dla 3 osób", sf::Style::Fullscreen);
     window.setFramerateLimit(50);
     wczytanie_tekstur();
     pola_w_tablicy(pola, window.getSize().x / 2, window.getSize().y / 2, w_size);
@@ -91,7 +94,6 @@ void Plansza::glowna_petla()
     client.connect(/*ExitGames::LoadBalancing::ConnectOptions().setServerAddress(region)*/);
     
     bool roomCreated = false;
-    bool attemptedJoinOrCreate = false;
 
     std::thread serviceThread(&Plansza::clientServiceLoop, this , std::ref(client));
 
@@ -109,7 +111,7 @@ void Plansza::glowna_petla()
         mouse = (sf::Vector2f)sf::Mouse::getPosition(window);
         if (cala_plansza)
         {
-            przyciski_na_planszy();
+            przyciski_na_planszy(std::ref(client));
 
             if (minus1 == 1 && !mat && czasy[ruch] > 0)
             {
@@ -144,43 +146,68 @@ void Plansza::glowna_petla()
 
         }
 
-
-        if (client.getState() == PeerStates::JoinedLobby && !attemptedJoinOrCreate && roomname!="" && nick != "") {
-            Common::JString roomName = roomname.c_str();
-            std::cout << roomname;
-            client.opJoinOrCreateRoom(roomName);
-            attemptedJoinOrCreate = true;
-        }
-        if (client.getCurrentlyJoinedRoom().getMasterClientID() == client.getLocalPlayer().getNumber())
-            host = true;
-        else
-            host = false;
-      
-        playerNr = (client.getLocalPlayer().getNumber() - 1) % 3;
-        if (!host && client.getState() == PeerStates::Joined)
+        if (online)
         {
-            nr_trybu = listener.receivedEventData["mode"];
-            z_tryb.setPosition(tryb[nr_trybu].getPosition());
-            host_started = listener.receivedEventData["host_started"];
-        }
 
-      //  if (listener.receivedEventDataStrings["nickname"]) {
+            if (client.getState() == PeerStates::JoinedLobby && !attemptedJoinOrCreate && roomname != "" && nick != "") {
+                Common::JString roomName = roomname.c_str();
+            
+                client.opJoinOrCreateRoom(roomName);
+                attemptedJoinOrCreate = true;
+            }
+            if (client.getCurrentlyJoinedRoom().getMasterClientID() == client.getLocalPlayer().getNumber())
+                host = true;
+            else
+                host = false;
+
+            playerNr = (client.getLocalPlayer().getNumber() - 1) % 3;
+            if (!host && client.getState() == PeerStates::Joined)
+            {
+                nr_trybu = listener.receivedEventData["mode"];
+                z_tryb.setPosition(tryb[nr_trybu].getPosition());
+                host_started = listener.receivedEventData["host_started"];
+            }
+
+            //  if (listener.receivedEventDataStrings["nickname"]) {
             if (listener.receivedEventDataStrings.find("nick_white") != listener.receivedEventDataStrings.end()) {
-               
+
                 nazwa_w.setString(listener.receivedEventDataStrings["nick_white"]);
-                std::cout << std::endl << "nazwa_w " + nazwa_w.getString().toAnsiString();
             }
             if (listener.receivedEventDataStrings.find("nick_black") != listener.receivedEventDataStrings.end()) {
                 nazwa_b.setString(listener.receivedEventDataStrings["nick_black"]);
-                std::cout << std::endl << "nazwa_b " + nazwa_b.getString().toAnsiString();
             }
-            if (listener.receivedEventDataStrings.find("nick_red") != listener.receivedEventDataStrings.end()){
+            if (listener.receivedEventDataStrings.find("nick_red") != listener.receivedEventDataStrings.end()) {
                 nazwa_r.setString(listener.receivedEventDataStrings["nick_red"]);
-                std::cout << std::endl << "nazwa_r " + nazwa_r.getString().toAnsiString();
             }
-       // }
-    
-        players = client.getCurrentlyJoinedRoom().getPlayerCount();
+            // }
+
+            players = client.getCurrentlyJoinedRoom().getPlayerCount();
+            if (cala_plansza && players < 3)
+            {
+                client.opLeaveRoom();
+                wybor_rozgrywki = 1;
+                plansza.setTexture(p[1]);
+                plansza.setScale(1 + (float)window.getSize().y / p[0].getSize().y * 0.98, 1 + (float)window.getSize().y / p[0].getSize().y * 0.98);
+                wyjdz.setScale((float)window.getSize().y / pr.getSize().x * 0.4, (float)window.getSize().y / pr.getSize().x * 0.4);
+                roomname = "";
+                nick = "";
+                cala_plansza = 0;
+                usun_p1 = 0;
+                usun_p2 = 0;
+                room.setString(roomname);
+                nickname.setString(nick);
+                wp_nazw = 0;
+                nazwa_b.setString("");
+                nazwa_w.setString("");
+                nazwa_r.setString("");
+                aktualna_nazwa = 0;
+                menu = 0;
+                attemptedJoinOrCreate = false;
+                online = 0;
+                host_started = 0;
+                
+            }
+        }
         
         if (menu == 1)
             obsluga_menu(std::ref(client));
@@ -202,10 +229,9 @@ void Plansza::glowna_petla()
             if (event.type == sf::Event::Closed)
                 window.close();
         
-            std::cout<<client.getLocalPlayer().getNumber();
 
 
-            if (event.type == sf::Event::MouseButtonPressed && playerNr == ruch)
+            if ((event.type == sf::Event::MouseButtonPressed && !online) || (event.type == sf::Event::MouseButtonPressed && playerNr == ruch && online))
                 if (event.key.code == sf::Mouse::Left)
                     for (auto i : fig)
                         if (i->get_sprite().getGlobalBounds().contains(mouse) && i->get_kolor() == ruch && !mat && !kon_czasu)
@@ -301,7 +327,6 @@ void Plansza::wprowadzanie_nazw()
     {
         if (event.key.code == sf::Keyboard::Enter)
         {
-            std::cout << playerInput << std::endl;
             if (std::regex_match(playerInput, reg))
                 aktualna_nazwa++;
             playerInput = "";
@@ -317,16 +342,16 @@ void Plansza::wprowadzanie_nazw()
         playerInput += event.text.unicode;
         
 
-        std::cout << aktualna_nazwa;
-
         if (aktualna_nazwa == 0)
             nazwa_w.setString(playerInput);
         else if (aktualna_nazwa == 1)
             nazwa_b.setString(playerInput);
         else if (aktualna_nazwa == 2)
             nazwa_r.setString(playerInput);
-        else
+        else {
             wp_nazw = 0;
+            menu = 1;
+        }
     }
 
     if (event.key.code == sf::Keyboard::Enter)
@@ -368,17 +393,6 @@ void Plansza::wprowadzanie_nazw()
     }
     else
         wyjdz.setScale((float)window.getSize().y / pr.getSize().x * 0.4, (float)window.getSize().y / pr.getSize().x * 0.4);
-
-
-    /*nazwa_w.setString("Gracz1");
-    
-    nazwa_b.setString("Gracz2");
-    
-    nazwa_r.setString("Gracz3");
-    
-    wp_nazw = 0;*/
-   
-    
 }
 
 void Plansza::wprowadzanie_nazwy_pokoju()
@@ -395,7 +409,7 @@ void Plansza::wprowadzanie_nazwy_pokoju()
     {
         if (event.key.code == sf::Keyboard::Enter)
         {
-            std::cout << playerInput << std::endl;
+
             
             if (aktualna_nazwa == 0) {
                 roomname = playerInput;
@@ -423,6 +437,10 @@ void Plansza::wprowadzanie_nazwy_pokoju()
                 nazwa_b.setString("");
                 nazwa_w.setString("");
                 nazwa_r.setString("");
+                roomname = "";
+                nick = "";
+                room.setString(roomname);
+                nickname.setString(nick);
                 aktualna_nazwa = 0;
             }
         }
@@ -750,8 +768,12 @@ void Plansza::wyswietlanie()
 
     if (usun_p1 == 0 &&  !wp_nazw && !wp_nazw_pok && !wybor_rozgrywki)
     {
-        if (!host)
-            rozpocznij.setTexture(oczekiwanie);
+        if (online) {
+            if (!host)
+                rozpocznij.setTexture(oczekiwanie);
+            else
+                rozpocznij.setTexture(pr);
+        }
         else
             rozpocznij.setTexture(pr);
         window.draw(rozpocznij);
@@ -760,13 +782,17 @@ void Plansza::wyswietlanie()
 
     if (menu && !wp_nazw && !wp_nazw_pok)
     {
-        if (players == 1)
-            liczba_graczy.setTexture(lg1);
-        else if (players == 2)
-            liczba_graczy.setTexture(lg2);
-        else if (players == 3)
-            liczba_graczy.setTexture(lg3);
-        window.draw(liczba_graczy);
+        if (online)
+        {
+            if (players == 1)
+                liczba_graczy.setTexture(lg1);
+            else if (players == 2)
+                liczba_graczy.setTexture(lg2);
+            else if (players == 3)
+                liczba_graczy.setTexture(lg3);
+            window.draw(liczba_graczy);
+        }
+
         window.draw(z_tryb);
         window.draw(powrot);
         for (int i = 0; i < 4; i++)
@@ -912,87 +938,147 @@ void Plansza::przejscia_menu_plansza()
 
 void Plansza::obsluga_menu(ExitGames::LoadBalancing::Client& client)
 {
-    if ((rozpocznij.getGlobalBounds().contains(mouse) && !wp_nazw) || host_started)
+    if (online)
     {
-        rozpocznij.setScale((float)window.getSize().y / pr.getSize().x * 0.55, (float)window.getSize().y / pr.getSize().x * 0.55);
-        if (event.type == sf::Event::MouseButtonPressed || host_started)
+        if ((rozpocznij.getGlobalBounds().contains(mouse) && !wp_nazw && !wp_nazw_pok) || host_started)
         {
-            if ((event.key.code == sf::Mouse::Left && players == 3 && host) || host_started)
+            rozpocznij.setScale((float)window.getSize().y / pr.getSize().x * 0.55, (float)window.getSize().y / pr.getSize().x * 0.55);
+            if (event.type == sf::Event::MouseButtonPressed || host_started)
             {
-                Common::Hashtable eventContent;
-                eventContent.put("host_started", 1);
-                nByte eventCode = 1;
-                ExitGames::LoadBalancing::RaiseEventOptions options;
+                if ((event.key.code == sf::Mouse::Left && players == 3 && host) || host_started)
+                {
+                    Common::Hashtable eventContent;
+                    eventContent.put("host_started", 1);
+                    nByte eventCode = 1;
+                    ExitGames::LoadBalancing::RaiseEventOptions options;
 
-              //  bool eventSent = client.opRaiseEvent(true, eventContent, eventCode, options);
-                
-               // Common::Hashtable eventContentS;
-               // ExitGames::Common::JString ni = nick.c_str() ;
-               // eventContent.put("nickname", nick.c_str());
-               // bool eventSents = client.opRaiseEvent(true, eventContentS, eventCode, options);
-                if (client.getLocalPlayer().getNumber() == 1) {
-                    nazwa_w.setString(nickname.getString());
-                    eventContent.put("nick_white", nick.c_str());
+                    //  bool eventSent = client.opRaiseEvent(true, eventContent, eventCode, options);
+
+                     // Common::Hashtable eventContentS;
+                     // ExitGames::Common::JString ni = nick.c_str() ;
+                     // eventContent.put("nickname", nick.c_str());
+                     // bool eventSents = client.opRaiseEvent(true, eventContentS, eventCode, options);
+                    if (client.getLocalPlayer().getNumber() == 1) {
+                        nazwa_w.setString(nickname.getString());
+                        eventContent.put("nick_white", nick.c_str());
+                    }
+                    if (client.getLocalPlayer().getNumber() == 2) {
+                        nazwa_b.setString(nickname.getString());
+                        eventContent.put("nick_black", nick.c_str());
+                    }
+                    if (client.getLocalPlayer().getNumber() == 3) {
+                        nazwa_r.setString(nickname.getString());
+                        eventContent.put("nick_red", nick.c_str());
+                    }
+
+                    bool eventSent = client.opRaiseEvent(true, eventContent, eventCode, options);
+
+                    rozpocznij.setScale((float)window.getSize().y / pr.getSize().x * 0.5, (float)window.getSize().y / pr.getSize().x * 0.5);
+                    menu = 0;
+                    przejscie1 = 1;
+
+                    fig.clear();
+                    ustawianie_figur();
+                    if (nr_trybu != 0)
+                        for (int j = 0; j < 3; j++)
+                        {
+                            czasy[j] = nr_trybu * 6000;
+                            tczasy[j].setString(std::to_string(nr_trybu * 10) + ":00,0");
+                        }
+                    else
+                        for (int j = 0; j < 3; j++)
+                        {
+                            czasy[j] = 3000;
+                            tczasy[j].setString("05:00,0");
+                        }
+                    ruch = 0;
+                    k = nullptr;
+                    podswietlenie.setTexture(sw_b);
+                    zagrania.clear();
+                    szach[0] = 0;
+                    kolej_g.setString("Kolej gracza:");
+                    kolej_gn.setString(nazwa_w.getString());
+                    mat = 0;
+                    kon_czasu = 0;
+                    szachh.setString("SZACH!");
+                    szachh.setPosition(window.getSize().x * 0.86, window.getSize().y * 0.3);
+
+                    if (nr_trybu != 0)
+                        for (int j = 0; j < 3; j++)
+                        {
+                            czasy[j] = nr_trybu * 6000;
+                            tczasy[j].setString(std::to_string(nr_trybu * 10) + ":00,0");
+                        }
+                    else
+                        for (int j = 0; j < 3; j++)
+                        {
+                            czasy[j] = 3000;
+                            tczasy[j].setString("05:00,0");
+                        }
                 }
-                if (client.getLocalPlayer().getNumber() == 2) {
-                    nazwa_b.setString(nickname.getString());
-                    eventContent.put("nick_black", nick.c_str());
-                }
-                if (client.getLocalPlayer().getNumber() == 3) {
-                    nazwa_r.setString(nickname.getString());
-                    eventContent.put("nick_red", nick.c_str());
-                }
-
-                bool eventSent = client.opRaiseEvent(true, eventContent, eventCode, options);
-
-                rozpocznij.setScale((float)window.getSize().y / pr.getSize().x * 0.5, (float)window.getSize().y / pr.getSize().x * 0.5);
-                menu = 0;
-                przejscie1 = 1;
-
-                fig.clear();
-                ustawianie_figur();
-                if (nr_trybu != 0)
-                    for (int j = 0; j < 3; j++)
-                    {
-                        czasy[j] = nr_trybu * 6000;
-                        tczasy[j].setString(std::to_string(nr_trybu * 10) + ":00,0");
-                    }
-                else
-                    for (int j = 0; j < 3; j++)
-                    {
-                        czasy[j] = 3000;
-                        tczasy[j].setString("05:00,0");
-                    }
-                ruch = 0;
-                k = nullptr;
-                podswietlenie.setTexture(sw_b);
-                zagrania.clear();
-                szach[0] = 0;
-                kolej_g.setString("Kolej gracza:");
-                kolej_gn.setString(nazwa_w.getString());
-                mat = 0;
-                kon_czasu = 0;
-                szachh.setString("SZACH!");
-                szachh.setPosition(window.getSize().x * 0.86, window.getSize().y * 0.3);
-
-                if (nr_trybu != 0)
-                    for (int j = 0; j < 3; j++)
-                    {
-                        czasy[j] = nr_trybu * 6000;
-                        tczasy[j].setString(std::to_string(nr_trybu * 10) + ":00,0");
-                    }
-                else
-                    for (int j = 0; j < 3; j++)
-                    {
-                        czasy[j] = 3000;
-                        tczasy[j].setString("05:00,0");
-                    }
             }
         }
+        else
+            rozpocznij.setScale((float)window.getSize().y / pr.getSize().x * 0.5, (float)window.getSize().y / pr.getSize().x * 0.5);
     }
     else
-        rozpocznij.setScale((float)window.getSize().y / pr.getSize().x * 0.5, (float)window.getSize().y / pr.getSize().x * 0.5);
+    {
+        if ((rozpocznij.getGlobalBounds().contains(mouse) && !wp_nazw && !wp_nazw_pok))
+        {
+            rozpocznij.setScale((float)window.getSize().y / pr.getSize().x * 0.55, (float)window.getSize().y / pr.getSize().x * 0.55);
+            if (event.type == sf::Event::MouseButtonPressed)
+            {
+                if (event.key.code == sf::Mouse::Left)
+                {
 
+                    rozpocznij.setScale((float)window.getSize().y / pr.getSize().x * 0.5, (float)window.getSize().y / pr.getSize().x * 0.5);
+                    menu = 0;
+                    przejscie1 = 1;
+
+                    fig.clear();
+                    ustawianie_figur();
+                    if (nr_trybu != 0)
+                        for (int j = 0; j < 3; j++)
+                        {
+                            czasy[j] = nr_trybu * 6000;
+                            tczasy[j].setString(std::to_string(nr_trybu * 10) + ":00,0");
+                        }
+                    else
+                        for (int j = 0; j < 3; j++)
+                        {
+                            czasy[j] = 3000;
+                            tczasy[j].setString("05:00,0");
+                        }
+                    ruch = 0;
+                    k = nullptr;
+                    podswietlenie.setTexture(sw_b);
+                    zagrania.clear();
+                    szach[0] = 0;
+                    kolej_g.setString("Kolej gracza:");
+                    kolej_gn.setString(nazwa_w.getString());
+                    mat = 0;
+                    kon_czasu = 0;
+                    szachh.setString("SZACH!");
+                    szachh.setPosition(window.getSize().x * 0.86, window.getSize().y * 0.3);
+
+                    if (nr_trybu != 0)
+                        for (int j = 0; j < 3; j++)
+                        {
+                            czasy[j] = nr_trybu * 6000;
+                            tczasy[j].setString(std::to_string(nr_trybu * 10) + ":00,0");
+                        }
+                    else
+                        for (int j = 0; j < 3; j++)
+                        {
+                            czasy[j] = 3000;
+                            tczasy[j].setString("05:00,0");
+                        }
+                }
+            }
+        }
+        else
+            rozpocznij.setScale((float)window.getSize().y / pr.getSize().x * 0.5, (float)window.getSize().y / pr.getSize().x * 0.5);
+    }
     if (wyjdz.getGlobalBounds().contains((sf::Vector2f)sf::Mouse::getPosition(window)) )
     {
         wyjdz.setScale((float)window.getSize().y / pr.getSize().x * 0.45, (float)window.getSize().y / pr.getSize().x * 0.45);
@@ -1014,11 +1100,22 @@ void Plansza::obsluga_menu(ExitGames::LoadBalancing::Client& client)
             {
                 powrot.setScale(window.getSize().y * 0.00018, window.getSize().y * 0.00017);
                 
-                wp_nazw = 1;
-                nazwa_b.setString("");
-                nazwa_w.setString("");
-                nazwa_r.setString("");
+                if (online)
+                {
+                    wp_nazw_pok = 1;
+                    room.setString("");
+                    nickname.setString("");
+                    client.opLeaveRoom();
+                }
+                else
+                {
+                    wp_nazw = 1;
+                    nazwa_b.setString("");
+                    nazwa_w.setString("");
+                    nazwa_r.setString("");
+                }
                 aktualna_nazwa = 0;
+                menu = 0;
             }
         }
     }
@@ -1037,15 +1134,17 @@ void Plansza::obsluga_menu(ExitGames::LoadBalancing::Client& client)
                     nr_trybu = i;
                     z_tryb.setPosition(tryb[i].getPosition());
                     
-                    if (host)
-                    {
-                        Common::Hashtable eventContent;
-                        eventContent.put("mode", i);
+                    if (online) {
+                        if (host)
+                        {
+                            Common::Hashtable eventContent;
+                            eventContent.put("mode", i);
 
-                        nByte eventCode = 1;
-                        ExitGames::LoadBalancing::RaiseEventOptions options;
+                            nByte eventCode = 1;
+                            ExitGames::LoadBalancing::RaiseEventOptions options;
 
-                        bool eventSent = client.opRaiseEvent(true, eventContent, eventCode, options);
+                            bool eventSent = client.opRaiseEvent(true, eventContent, eventCode, options);
+                        }
                     }
 
                   
@@ -1060,7 +1159,7 @@ void Plansza::obsluga_menu(ExitGames::LoadBalancing::Client& client)
 
 
 
-void Plansza::przyciski_na_planszy()
+void Plansza::przyciski_na_planszy(ExitGames::LoadBalancing::Client& client)
 {
     if (powrot.getGlobalBounds().contains((sf::Vector2f)sf::Mouse::getPosition(window)))
     {
@@ -1071,7 +1170,32 @@ void Plansza::przyciski_na_planszy()
             {
                 powrot.setScale(window.getSize().y * 0.00018, window.getSize().y * 0.00017);
                 cala_plansza = 0;
-                przejscie2 = 1;
+                if (online)
+                {
+                    client.opLeaveRoom();
+                    wybor_rozgrywki = 1;
+                    plansza.setTexture(p[1]);
+                    plansza.setScale(1 + (float)window.getSize().y / p[0].getSize().y * 0.98, 1 + (float)window.getSize().y / p[0].getSize().y * 0.98);
+                    wyjdz.setScale((float)window.getSize().y / pr.getSize().x * 0.4, (float)window.getSize().y / pr.getSize().x * 0.4);
+                    roomname = "";
+                    nick = "";
+                    usun_p1 = 0;
+                    usun_p2 = 0;
+                    room.setString(roomname);
+                    nickname.setString(nick);
+                    wp_nazw = 0;
+                    nazwa_b.setString("");
+                    nazwa_w.setString("");
+                    nazwa_r.setString("");
+                    aktualna_nazwa = 0;
+                    menu = 0;
+                    attemptedJoinOrCreate = false;
+                    online = 0;
+                    host_started = 0;
+
+                }
+                else
+                    przejscie2 = 1;
      
             }
         }
@@ -1079,7 +1203,7 @@ void Plansza::przyciski_na_planszy()
     else
         powrot.setScale(window.getSize().y * 0.00018, window.getSize().y * 0.00017);
 
-    if (restart.getGlobalBounds().contains((sf::Vector2f)sf::Mouse::getPosition(window)))
+    if (restart.getGlobalBounds().contains((sf::Vector2f)sf::Mouse::getPosition(window)) && !online)
     {
         restart.setScale(window.getSize().y * 0.00023, window.getSize().y * 0.00021);
         if (event.type == sf::Event::MouseButtonPressed)

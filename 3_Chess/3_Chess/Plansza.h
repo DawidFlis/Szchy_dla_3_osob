@@ -39,7 +39,7 @@ class Plansza
 	sf::RenderWindow window;
 	sf::Texture tlo;
 	sf::Font font;
-	bool mozliwe_ruchy[3][8][4], host;
+	bool mozliwe_ruchy[3][8][4], host = 0;
 	sf::Texture zp, zp1;
 	sf::Sprite z_pole, z_pole1;
 	void ustawianie_figur();
@@ -47,6 +47,7 @@ class Plansza
 	void wyswietlanie();
 	bool usun_p1 = 0, usun_p2 = 0, menu = 0, wybor_rozgrywki = 1, cala_plansza = 0, przejscie1 = 0, przejscie2 = 0, szach[3] = { 0, 0, 0 };
 	std::shared_ptr<Figura> k;
+	bool attemptedJoinOrCreate = false;
 	void przejscia_menu_plansza();
 	int i = 0;
 	void obsluga_menu(ExitGames::LoadBalancing::Client&);
@@ -56,9 +57,9 @@ class Plansza
 	float dx, dy;
 	int ruch = 0;
 	sf::Vector2f mouse;
-	void przyciski_na_planszy();
 	void przeniesienie_figury(ExitGames::LoadBalancing::Client&);
 	void przeniesienie_figury_przeciwnika();
+	void przyciski_na_planszy(ExitGames::LoadBalancing::Client& client);
 	bool spr_szach(std::shared_ptr<Figura>&);
 	bool wp_nazw = 0, wp_nazw_pok = 0;
 	std::string playerInput, roomname="", nick;
